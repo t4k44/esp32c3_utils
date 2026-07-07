@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>esp32c3_lib: src/ota_helper.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">esp32c3_lib
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">ota_helper.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="log__helper_8h_source.html">log_helper.h</a>&quot;</code><br />
+<code>#include &lt;ArduinoOTA.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ota_helper.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="ota__helper_8h__incl.png" border="0" usemap="#asrc_2ota__helper_8h" alt=""/></div>
+<map name="asrc_2ota__helper_8h" id="asrc_2ota__helper_8h">
+<area shape="rect" title=" " alt="" coords="105,5,230,31"/>
+<area shape="rect" href="log__helper_8h.html" title=" " alt="" coords="51,79,153,104"/>
+<area shape="poly" title=" " alt="" coords="159,33,124,70,120,67,155,29"/>
+<area shape="rect" title=" " alt="" coords="177,79,288,104"/>
+<area shape="poly" title=" " alt="" coords="180,29,215,67,211,70,176,33"/>
+<area shape="rect" title=" " alt="" coords="5,152,89,177"/>
+<area shape="poly" title=" " alt="" coords="95,106,67,143,62,140,91,103"/>
+<area shape="rect" title=" " alt="" coords="113,152,200,177"/>
+<area shape="poly" title=" " alt="" coords="113,103,142,140,137,143,109,106"/>
+</map>
+</div>
+</div>
+<p><a href="ota__helper_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a4f09d92897fdf84125059cf3bb5a55d5" id="r_a4f09d92897fdf84125059cf3bb5a55d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ota__helper_8h.html#a4f09d92897fdf84125059cf3bb5a55d5">setupOTA</a> ()</td></tr>
+<tr class="memdesc:a4f09d92897fdf84125059cf3bb5a55d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">OTA (Over-The-Air) アップデート機能をセットアップします。  <br /></td></tr>
+<tr class="separator:a4f09d92897fdf84125059cf3bb5a55d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3caeaca3fcbd288827f42df9af8b7f08" id="r_a3caeaca3fcbd288827f42df9af8b7f08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ota__helper_8h.html#a3caeaca3fcbd288827f42df9af8b7f08">handleOTA</a> ()</td></tr>
+<tr class="memdesc:a3caeaca3fcbd288827f42df9af8b7f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">OTAアップデートの処理を実行します。  <br /></td></tr>
+<tr class="separator:a3caeaca3fcbd288827f42df9af8b7f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a3caeaca3fcbd288827f42df9af8b7f08" name="a3caeaca3fcbd288827f42df9af8b7f08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3caeaca3fcbd288827f42df9af8b7f08">&#9670;&#160;</a></span>handleOTA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleOTA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OTAアップデートの処理を実行します。 </p>
+<p>ArduinoOTAライブラリのハンドル関数を呼び出し、 OTA通信を処理します。loop関数内で定期的に呼び出す必要があります。 </p>
+
+</div>
+</div>
+<a id="a4f09d92897fdf84125059cf3bb5a55d5" name="a4f09d92897fdf84125059cf3bb5a55d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f09d92897fdf84125059cf3bb5a55d5">&#9670;&#160;</a></span>setupOTA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setupOTA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OTA (Over-The-Air) アップデート機能をセットアップします。 </p>
+<p>ホスト名の設定、OTA開始/終了/進捗/エラー時のコールバック関数を登録し、 OTAサービスを開始します。 </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="ota__helper_8h_a4f09d92897fdf84125059cf3bb5a55d5_cgraph.png" border="0" usemap="#aota__helper_8h_a4f09d92897fdf84125059cf3bb5a55d5_cgraph" alt=""/></div>
+<map name="aota__helper_8h_a4f09d92897fdf84125059cf3bb5a55d5_cgraph" id="aota__helper_8h_a4f09d92897fdf84125059cf3bb5a55d5_cgraph">
+<area shape="rect" title="OTA (Over&#45;The&#45;Air) アップデート機能をセットアップします。" alt="" coords="5,80,89,105"/>
+<area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルでメッセージを記録・出力します。" alt="" coords="137,80,237,105"/>
+<area shape="poly" title=" " alt="" coords="89,90,124,90,124,95,89,95"/>
+<area shape="rect" href="log__helper_8cpp.html#ac376aa5745870a379ad0580d50f82167" title="ログレベルに応じた整数値を取得します。" alt="" coords="295,5,414,31"/>
+<area shape="poly" title=" " alt="" coords="210,77,284,40,300,33,302,38,286,44,212,82"/>
+<area shape="rect" href="log__helper_8cpp.html#a12d075f9ee7b24eb3b684b6c78052a1c" title="ログレベルに応じた文字列を取得します。" alt="" coords="285,55,424,80"/>
+<area shape="poly" title=" " alt="" coords="237,82,271,77,272,83,238,88"/>
+<area shape="rect" href="mqtt__helper_8cpp.html#aa8a283f5dd5e82763ed6d71915f2485f" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="301,104,408,129"/>
+<area shape="poly" title=" " alt="" coords="224,103,288,113,287,119,224,108"/>
+<area shape="poly" title=" " alt="" coords="317,107,251,96,252,90,318,101"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

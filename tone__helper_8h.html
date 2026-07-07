@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>esp32c3_lib: src/tone_helper.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">esp32c3_lib
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">tone_helper.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;driver/ledc.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+tone_helper.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="tone__helper_8h__incl.png" border="0" usemap="#asrc_2tone__helper_8h" alt=""/></div>
+<map name="asrc_2tone__helper_8h" id="asrc_2tone__helper_8h">
+<area shape="rect" title=" " alt="" coords="39,5,173,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,89,104"/>
+<area shape="poly" title=" " alt="" coords="98,33,67,70,63,67,94,29"/>
+<area shape="rect" title=" " alt="" coords="113,79,216,104"/>
+<area shape="poly" title=" " alt="" coords="118,29,149,67,145,70,114,33"/>
+</map>
+</div>
+</div>
+<p><a href="tone__helper_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ab61d0981ed42df9e18211b273d22cfcd" id="r_ab61d0981ed42df9e18211b273d22cfcd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tone__helper_8h.html#ab61d0981ed42df9e18211b273d22cfcd">BUZZER_PIN</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ab61d0981ed42df9e18211b273d22cfcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94c6d6493d7b7b080757ce81a59a949" id="r_ad94c6d6493d7b7b080757ce81a59a949"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tone__helper_8h.html#ad94c6d6493d7b7b080757ce81a59a949">BZ_CHANNEL</a>&#160;&#160;&#160;LEDC_CHANNEL_0</td></tr>
+<tr class="separator:ad94c6d6493d7b7b080757ce81a59a949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730f3cb08571ebc200ce988ecb0d5903" id="r_a730f3cb08571ebc200ce988ecb0d5903"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tone__helper_8h.html#a730f3cb08571ebc200ce988ecb0d5903">BZ_TIMER</a>&#160;&#160;&#160;LEDC_TIMER_0</td></tr>
+<tr class="separator:a730f3cb08571ebc200ce988ecb0d5903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8442822bb1c82c207d1cc18b49cdb00" id="r_aa8442822bb1c82c207d1cc18b49cdb00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tone__helper_8h.html#aa8442822bb1c82c207d1cc18b49cdb00">BZ_MODE</a>&#160;&#160;&#160;LEDC_LOW_SPEED_MODE</td></tr>
+<tr class="separator:aa8442822bb1c82c207d1cc18b49cdb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af26aa432dc4b5c209dd9e7d4d1b294" id="r_a3af26aa432dc4b5c209dd9e7d4d1b294"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tone__helper_8h.html#a3af26aa432dc4b5c209dd9e7d4d1b294">BZ_RES</a>&#160;&#160;&#160;LEDC_TIMER_8_BIT</td></tr>
+<tr class="separator:a3af26aa432dc4b5c209dd9e7d4d1b294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a4643d4c8816b378693ac8e4da3453eed" id="r_a4643d4c8816b378693ac8e4da3453eed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tone__helper_8h.html#a4643d4c8816b378693ac8e4da3453eed">toneESP</a> (uint32_t freq, uint32_t duration_ms)</td></tr>
+<tr class="memdesc:a4643d4c8816b378693ac8e4da3453eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された周波数と期間でトーンを生成します。  <br /></td></tr>
+<tr class="separator:a4643d4c8816b378693ac8e4da3453eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ee9b3421813159d270da793ad603c5" id="r_ae0ee9b3421813159d270da793ad603c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tone__helper_8h.html#ae0ee9b3421813159d270da793ad603c5">beepOK</a> ()</td></tr>
+<tr class="memdesc:ae0ee9b3421813159d270da793ad603c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">成功を示す短いビープ音を鳴らします。  <br /></td></tr>
+<tr class="separator:ae0ee9b3421813159d270da793ad603c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d5ad8f8daaed55a5b97fb55aa89170" id="r_aa2d5ad8f8daaed55a5b97fb55aa89170"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tone__helper_8h.html#aa2d5ad8f8daaed55a5b97fb55aa89170">beepError</a> ()</td></tr>
+<tr class="memdesc:aa2d5ad8f8daaed55a5b97fb55aa89170"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーを示すビープ音を鳴らします。  <br /></td></tr>
+<tr class="separator:aa2d5ad8f8daaed55a5b97fb55aa89170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ab61d0981ed42df9e18211b273d22cfcd" name="ab61d0981ed42df9e18211b273d22cfcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61d0981ed42df9e18211b273d22cfcd">&#9670;&#160;</a></span>BUZZER_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUZZER_PIN&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad94c6d6493d7b7b080757ce81a59a949" name="ad94c6d6493d7b7b080757ce81a59a949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad94c6d6493d7b7b080757ce81a59a949">&#9670;&#160;</a></span>BZ_CHANNEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BZ_CHANNEL&#160;&#160;&#160;LEDC_CHANNEL_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8442822bb1c82c207d1cc18b49cdb00" name="aa8442822bb1c82c207d1cc18b49cdb00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8442822bb1c82c207d1cc18b49cdb00">&#9670;&#160;</a></span>BZ_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BZ_MODE&#160;&#160;&#160;LEDC_LOW_SPEED_MODE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3af26aa432dc4b5c209dd9e7d4d1b294" name="a3af26aa432dc4b5c209dd9e7d4d1b294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3af26aa432dc4b5c209dd9e7d4d1b294">&#9670;&#160;</a></span>BZ_RES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BZ_RES&#160;&#160;&#160;LEDC_TIMER_8_BIT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a730f3cb08571ebc200ce988ecb0d5903" name="a730f3cb08571ebc200ce988ecb0d5903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730f3cb08571ebc200ce988ecb0d5903">&#9670;&#160;</a></span>BZ_TIMER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BZ_TIMER&#160;&#160;&#160;LEDC_TIMER_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="aa2d5ad8f8daaed55a5b97fb55aa89170" name="aa2d5ad8f8daaed55a5b97fb55aa89170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d5ad8f8daaed55a5b97fb55aa89170">&#9670;&#160;</a></span>beepError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void beepError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>エラーを示すビープ音を鳴らします。 </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="tone__helper_8h_aa2d5ad8f8daaed55a5b97fb55aa89170_cgraph.png" border="0" usemap="#atone__helper_8h_aa2d5ad8f8daaed55a5b97fb55aa89170_cgraph" alt=""/></div>
+<map name="atone__helper_8h_aa2d5ad8f8daaed55a5b97fb55aa89170_cgraph" id="atone__helper_8h_aa2d5ad8f8daaed55a5b97fb55aa89170_cgraph">
+<area shape="rect" title="エラーを示すビープ音を鳴らします。" alt="" coords="5,5,91,31"/>
+<area shape="rect" href="tone__helper_8h.html#a4643d4c8816b378693ac8e4da3453eed" title="指定された周波数と期間でトーンを生成します。" alt="" coords="139,5,213,31"/>
+<area shape="poly" title=" " alt="" coords="91,15,125,15,125,21,91,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae0ee9b3421813159d270da793ad603c5" name="ae0ee9b3421813159d270da793ad603c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0ee9b3421813159d270da793ad603c5">&#9670;&#160;</a></span>beepOK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void beepOK </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>成功を示す短いビープ音を鳴らします。 </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="tone__helper_8h_ae0ee9b3421813159d270da793ad603c5_cgraph.png" border="0" usemap="#atone__helper_8h_ae0ee9b3421813159d270da793ad603c5_cgraph" alt=""/></div>
+<map name="atone__helper_8h_ae0ee9b3421813159d270da793ad603c5_cgraph" id="atone__helper_8h_ae0ee9b3421813159d270da793ad603c5_cgraph">
+<area shape="rect" title="成功を示す短いビープ音を鳴らします。" alt="" coords="5,5,79,31"/>
+<area shape="rect" href="tone__helper_8h.html#a4643d4c8816b378693ac8e4da3453eed" title="指定された周波数と期間でトーンを生成します。" alt="" coords="127,5,201,31"/>
+<area shape="poly" title=" " alt="" coords="79,15,113,15,113,21,79,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4643d4c8816b378693ac8e4da3453eed" name="a4643d4c8816b378693ac8e4da3453eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4643d4c8816b378693ac8e4da3453eed">&#9670;&#160;</a></span>toneESP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void toneESP </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>freq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>duration_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定された周波数と期間でトーンを生成します。 </p>
+<p>LEDCタイマーとチャンネルを設定し、指定された周波数でデューティサイクル50のPWM信号を出力します。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">freq</td><td>トーンの周波数（Hz）。 </td></tr>
+    <tr><td class="paramname">duration_ms</td><td>トーンを鳴らす期間（ミリ秒）。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="tone__helper_8h_a4643d4c8816b378693ac8e4da3453eed_icgraph.png" border="0" usemap="#atone__helper_8h_a4643d4c8816b378693ac8e4da3453eed_icgraph" alt=""/></div>
+<map name="atone__helper_8h_a4643d4c8816b378693ac8e4da3453eed_icgraph" id="atone__helper_8h_a4643d4c8816b378693ac8e4da3453eed_icgraph">
+<area shape="rect" title="指定された周波数と期間でトーンを生成します。" alt="" coords="139,31,213,56"/>
+<area shape="rect" href="tone__helper_8h.html#aa2d5ad8f8daaed55a5b97fb55aa89170" title="エラーを示すビープ音を鳴らします。" alt="" coords="5,5,91,31"/>
+<area shape="poly" title=" " alt="" coords="124,36,90,29,91,24,126,31"/>
+<area shape="rect" href="tone__helper_8h.html#ae0ee9b3421813159d270da793ad603c5" title="成功を示す短いビープ音を鳴らします。" alt="" coords="11,55,85,80"/>
+<area shape="poly" title=" " alt="" coords="125,55,86,63,85,58,124,50"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
