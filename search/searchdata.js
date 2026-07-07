@@ -1,12 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "bcefghlmopstw",
-  1: "bhlmotw",
+  0: "bcefghlmoprstuwセ提",
+  1: "bhlmortw",
   2: "bcfghlmpst",
   3: "em",
   4: "l",
   5: "l",
-  6: "b"
+  6: "b",
+  7: "lu"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "variables",
   4: "enums",
   5: "enumvalues",
-  6: "defines"
+  6: "defines",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "変数",
   4: "列挙型",
   5: "列挙値",
-  6: "マクロ定義"
+  6: "マクロ定義",
+  7: "ページ"
 };
 
