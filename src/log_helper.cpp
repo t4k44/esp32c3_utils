@@ -5,9 +5,13 @@
 #include <settings.h>
 
 /**
- * @brief LogLevel列挙型に対応する文字列を返します。
- * @param level ログレベル。
- * @return ログレベルの文字列表現。
+ * @brief ログレベルに応じた文字列を取得します。
+ *
+ * @details 内部のデバッグログ出力時に、指定された LogLevel 列挙型の値を
+ * 対応する識別用の文字列（例: "ERROR", "WARN"）に変換するために使用します。
+ *
+ * @param[in] level 変換対象のログレベル（LogLevel型）
+ * @return String 対応するログレベルの文字列（未定義の場合は "UNKNOWN"）
  */
 String getLogLevelString(LogLevel level) {
   switch (level) {
@@ -25,9 +29,13 @@ String getLogLevelString(LogLevel level) {
 }
 
 /**
- * @brief LogLevel列挙型に対応する整数値を返します。
- * @param level ログレベル。
- * @return ログレベルの整数表現。
+ * @brief ログレベルに応じた整数値を取得します。
+ *
+ * @details ログの優先度比較や、条件分岐の判定用に
+ * 指定された LogLevel 列挙型の値を対応する数値へ変換します。
+ *
+ * @param[in] level 変換対象のログレベル（LogLevel型）
+ * @return int 対応するログレベルの数値（未定義の場合は 0）
  */
 int getLogLevelInt(LogLevel level) {
   switch (level) {
@@ -45,12 +53,14 @@ int getLogLevelInt(LogLevel level) {
 }
 
 /**
- * @brief 指定されたログレベルとメッセージを処理します。
+ * @brief 指定されたログレベルでメッセージを記録・出力します。
  *
- * CURRENT_LOG_LEVELに基づいてメッセージをフィルタリングし、
- * MQTTまたはシリアルポートに出力します。
- * @param level ログレベル。
- * @param message 出力するメッセージ。
+ * @details 現在の設定（CURRENT_LOG_LEVEL）と判定し、有効な場合にのみ処理を行います。
+ * JSONバッファを生成してログデータを格納し、有効化されているマクロに応じて
+ * MQTT送信（LOG_TO_MQTT）やシリアル出力（LOG_TO_SERIAL）を行います。
+ *
+ * @param[in] level ログメッセージの重要度（LogLevel型）
+ * @param[in] message 記録するログ本文の文字列
  */
 void logMessage(LogLevel level, const String &message) {
   if (level > CURRENT_LOG_LEVEL)
