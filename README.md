@@ -57,20 +57,26 @@
 
 ## 提供される機能
 
-### `boot_helper.h` / `boot_helper.cpp`
+### boot_helper.h / boot_helper.cpp
 デバイスの起動ステータス（リセット理由、ファームウェアバージョン、コアID、ヒープ情報、フラッシュサイズなど）をJSON形式で構築し、MQTT_PUB_STATUSトピックにパブリッシュします。
 
-### `log_helper.h` / `log_helper.cpp`
+### log_helper.h / log_helper.cpp
 ログレベル（ERROR, WARN, INFO, DEBUG）に基づいてメッセージをフィルタリングし、設定に応じてMQTTまたはシリアルポートに出力します。
 
-### `mqtt_helper.h` / `mqtt_helper.cpp`
+### mqtt_helper.h / mqtt_helper.cpp
 MQTTブローカーへの接続管理、指定されたトピックとペイロードでのメッセージパブリッシュ、受信メッセージの処理、およびデバイスのステータス情報（RSSI、稼働時間、ヒープメモリなど）の定期的なMQTT送信機能を提供します。
 
-### `ota_helper.h`
+### ota_helper.h
 OTA (Over-The-Air) アップデート機能のセットアップと処理を行います。ホスト名の設定、OTAの開始/終了/進捗/エラー時のコールバック関数を登録し、OTAサービスを開始・処理します。
 
-### `tone_helper.h`
+### tone_helper.h
 指定された周波数と期間でトーンを生成する機能を提供します。成功を示す短いビープ音 (`beepOK()`) やエラーを示すビープ音 (`beepError()`) のユーティリティ関数も含まれています。
 
-### `wifi_helper.h`
+### wifi_helper.h
 WiFi接続を維持する機能を提供します。WiFiが未接続の場合、再接続を試行し、接続成功時にはIPアドレス、SSID、MACアドレスをログに出力します。接続に失敗した場合でもループを維持します。
+
+## ドキュメント生成
+
+```bash
+doxygen Doxyfile
+```
