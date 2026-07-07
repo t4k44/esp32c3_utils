@@ -95,24 +95,27 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md2"></a>
 提供される機能</h1>
 <h2><a class="anchor" id="autotoc_md3"></a>
-&lt;tt&gt;boot_helper.h&lt;/tt&gt; / &lt;tt&gt;boot_helper.cpp&lt;/tt&gt;</h2>
+boot_helper.h / boot_helper.cpp</h2>
 <p>デバイスの起動ステータス（リセット理由、ファームウェアバージョン、コアID、ヒープ情報、フラッシュサイズなど）をJSON形式で構築し、MQTT_PUB_STATUSトピックにパブリッシュします。</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
-&lt;tt&gt;log_helper.h&lt;/tt&gt; / &lt;tt&gt;log_helper.cpp&lt;/tt&gt;</h2>
+log_helper.h / log_helper.cpp</h2>
 <p>ログレベル（ERROR, WARN, INFO, DEBUG）に基づいてメッセージをフィルタリングし、設定に応じてMQTTまたはシリアルポートに出力します。</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
-&lt;tt&gt;mqtt_helper.h&lt;/tt&gt; / &lt;tt&gt;mqtt_helper.cpp&lt;/tt&gt;</h2>
+mqtt_helper.h / mqtt_helper.cpp</h2>
 <p>MQTTブローカーへの接続管理、指定されたトピックとペイロードでのメッセージパブリッシュ、受信メッセージの処理、およびデバイスのステータス情報（RSSI、稼働時間、ヒープメモリなど）の定期的なMQTT送信機能を提供します。</p>
 <h2><a class="anchor" id="autotoc_md6"></a>
-&lt;tt&gt;ota_helper.h&lt;/tt&gt;</h2>
+ota_helper.h</h2>
 <p>OTA (Over-The-Air) アップデート機能のセットアップと処理を行います。ホスト名の設定、OTAの開始/終了/進捗/エラー時のコールバック関数を登録し、OTAサービスを開始・処理します。</p>
 <h2><a class="anchor" id="autotoc_md7"></a>
-&lt;tt&gt;tone_helper.h&lt;/tt&gt;</h2>
+tone_helper.h</h2>
 <p>指定された周波数と期間でトーンを生成する機能を提供します。成功を示す短いビープ音 (<code><a class="el" href="tone__helper_8h.html#ae0ee9b3421813159d270da793ad603c5" title="成功を示す短いビープ音を鳴らします。">beepOK()</a></code>) やエラーを示すビープ音 (<code><a class="el" href="tone__helper_8h.html#aa2d5ad8f8daaed55a5b97fb55aa89170" title="エラーを示すビープ音を鳴らします。">beepError()</a></code>) のユーティリティ関数も含まれています。</p>
 <h2><a class="anchor" id="autotoc_md8"></a>
-&lt;tt&gt;wifi_helper.h&lt;/tt&gt;</h2>
-<p>WiFi接続を維持する機能を提供します。WiFiが未接続の場合、再接続を試行し、接続成功時にはIPアドレス、SSID、MACアドレスをログに出力します。接続に失敗した場合でもループを維持します。 </p>
-</div></div><!-- PageDoc -->
+wifi_helper.h</h2>
+<p>WiFi接続を維持する機能を提供します。WiFiが未接続の場合、再接続を試行し、接続成功時にはIPアドレス、SSID、MACアドレスをログに出力します。接続に失敗した場合でもループを維持します。</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+ドキュメント生成</h1>
+<div class="fragment"><div class="line">doxygen Doxyfile</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['beeperror_0',['beepError',['../tone__helper_8h.html#aa2d5ad8f8daaed55a5b97fb55aa89170',1,'tone_helper.h']]],
   ['beepok_1',['beepOK',['../tone__helper_8h.html#ae0ee9b3421813159d270da793ad603c5',1,'tone_helper.h']]],
-  ['boot_5fhelper_20h_20tt_20tt_20boot_5fhelper_20cpp_20tt_2',['&lt;tt&gt;boot_helper.h&lt;/tt&gt; / &lt;tt&gt;boot_helper.cpp&lt;/tt&gt;',['../index.html#autotoc_md3',1,'']]],
+  ['boot_5fhelper_20h_20boot_5fhelper_20cpp_2',['boot_helper.h / boot_helper.cpp',['../index.html#autotoc_md3',1,'']]],
   ['boot_5fhelper_2ecpp_3',['boot_helper.cpp',['../boot__helper_8cpp.html',1,'']]],
   ['boot_5fhelper_2eh_4',['boot_helper.h',['../boot__helper_8h.html',1,'']]],
   ['buzzer_5fpin_5',['BUZZER_PIN',['../tone__helper_8h.html#ab61d0981ed42df9e18211b273d22cfcd',1,'tone_helper.h']]],
