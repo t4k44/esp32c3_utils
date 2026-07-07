@@ -3,7 +3,7 @@ name: Deploy Doxygen to GitHub Pages
 on:
   push:
     branches:
-      - main  # または master
+      - main
   workflow_dispatch:
 
 permissions:
@@ -29,4 +29,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html  # Doxyfile の OUTPUT_DIRECTORY や HTML_OUTPUT に合わせて変更してください
+          publish_dir: ./doc/html  # Doxyfile の OUTPUT_DIRECTORY や HTML_OUTPUT に合わせて変更してください
