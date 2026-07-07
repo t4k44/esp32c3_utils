@@ -9,12 +9,6 @@
 WiFiClient espClient;
 PubSubClient mqttClient(espClient);
 
-/**
- * @brief MQTTブローカーへの接続を試行します。
- *
- * 接続が確立されていない場合にのみ再接続を試み、
- * 成功時にはMQTTサブスクリプションを設定します。
- */
 void connectMQTT() {
   mqttClient.setServer(MQTT_BROKER, MQTT_PORT);
 
@@ -31,11 +25,6 @@ void connectMQTT() {
   }
 }
 
-/**
- * @brief 指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。
- * @param topic パブリッシュするMQTTトピック。
- * @param payload パブリッシュするメッセージペイロード。
- */
 void publishMQTT(const String &topic, const String &payload) {
   static bool inLogging = false; // logMessage() を呼ぶ前にループ保護。
   if (inLogging)
@@ -48,20 +37,8 @@ void publishMQTT(const String &topic, const String &payload) {
   inLogging = false;
 }
 
-/**
- * @brief MQTTクライアントのループ処理を実行します。
- *
- * 受信メッセージの処理や接続維持のために定期的に呼び出す必要があります。
- */
 void handleMQTT() { mqttClient.loop(); }
 
-/**
- * @brief 受信したMQTTメッセージを処理します。
- *
- * 現在は "smart_speaker/speak" トピックのメッセージを処理します。
- * @param topic 受信したメッセージのトピック。
- * @param payload 受信したメッセージのペイロード。
- */
 void handleReceivedMessage(const char *topic, const char *payload) {
   if (strcmp(topic, "smart_speaker/speak") == 0) {
     logMessage(LOG_INFO, String("音声受信指令: ") + payload);
