@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['senddevicestatus_0',['senddevicestatus',['../mqtt__helper_8cpp.html#a3f1b2d873f13395853489cd5f50258f4',1,'sendDeviceStatus():&#160;mqtt_helper.cpp'],['../mqtt__helper_8h.html#a3f1b2d873f13395853489cd5f50258f4',1,'sendDeviceStatus():&#160;mqtt_helper.cpp']]],
-  ['setupota_1',['setupOTA',['../ota__helper_8h.html#a4f09d92897fdf84125059cf3bb5a55d5',1,'ota_helper.h']]]
+  ['publishbootstatus_0',['publishBootStatus',['../boot__helper_8cpp.html#aabf27c47c5001e93b889fb07cae36ec1',1,'publishBootStatus():&#160;boot_helper.cpp'],['../boot__helper_8h.html#aabf27c47c5001e93b889fb07cae36ec1',1,'publishBootStatus():&#160;boot_helper.cpp']]],
+  ['publishmqtt_1',['publishMQTT',['../mqtt__helper_8cpp.html#aa8a283f5dd5e82763ed6d71915f2485f',1,'publishMQTT(const String &amp;topic, const String &amp;payload):&#160;mqtt_helper.cpp'],['../mqtt__helper_8h.html#aa8a283f5dd5e82763ed6d71915f2485f',1,'publishMQTT(const String &amp;topic, const String &amp;payload):&#160;mqtt_helper.cpp']]]
 ];

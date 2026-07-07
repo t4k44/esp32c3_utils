@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['maintainwificonnection_0',['maintainWiFiConnection',['../wifi__helper_8h.html#a372449d9713c2910151ba401569e571c',1,'wifi_helper.h']]],
-  ['mqtt_5fhelper_2ecpp_1',['mqtt_helper.cpp',['../mqtt__helper_8cpp.html',1,'']]],
-  ['mqtt_5fhelper_2eh_2',['mqtt_helper.h',['../mqtt__helper_8h.html',1,'']]],
-  ['mqttclient_3',['mqttclient',['../mqtt__helper_8h.html#a86d63f481644da70f063c2593fcafe19',1,'mqttClient:&#160;mqtt_helper.h'],['../mqtt__helper_8cpp.html#a717105311582e81f1c9c6bb2238a00d2',1,'mqttClient(espClient):&#160;mqtt_helper.cpp']]]
+  ['log_5fdebug_0',['LOG_DEBUG',['../log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab9f002c6ffbfd511da8090213227454e',1,'log_helper.h']]],
+  ['log_5ferror_1',['LOG_ERROR',['../log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a230506cce5c68c3bac5a821c42ed3473',1,'log_helper.h']]],
+  ['log_5fhelper_2ecpp_2',['log_helper.cpp',['../log__helper_8cpp.html',1,'']]],
+  ['log_5fhelper_2eh_3',['log_helper.h',['../log__helper_8h.html',1,'']]],
+  ['log_5finfo_4',['LOG_INFO',['../log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a6e98ff471e3ce6c4ef2d75c37ee51837',1,'log_helper.h']]],
+  ['log_5fwarn_5',['LOG_WARN',['../log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac8041ffa22bc823d4726701cdb13fc13',1,'log_helper.h']]],
+  ['loglevel_6',['LogLevel',['../log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9',1,'log_helper.h']]],
+  ['logmessage_7',['logMessage',['../log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20',1,'logMessage(LogLevel level, const String &amp;message):&#160;log_helper.cpp'],['../log__helper_8h.html#a68878a46f4d4182c42caaa8814a90f20',1,'logMessage(LogLevel level, const String &amp;message):&#160;log_helper.cpp']]]
 ];

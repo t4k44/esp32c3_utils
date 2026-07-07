@@ -3,12 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>esp32c3_lib: src/log_helper.cpp ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -29,21 +31,20 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.8 -->
+<!-- 構築: Doxygen 1.16.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','検索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
@@ -69,24 +70,25 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#func-members">関数</a>  </div>
   <div class="headertitle"><div class="title">log_helper.cpp ファイル</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="log__helper_8h_source.html">log_helper.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mqtt__helper_8h_source.html">mqtt_helper.h</a>&quot;</code><br />
+<code>#include &lt;Arduino.h&gt;</code><br />
 <code>#include &lt;ArduinoJson.h&gt;</code><br />
 <code>#include &lt;settings.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="log__helper_8h_source.html">log_helper.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mqtt__helper_8h_source.html">mqtt_helper.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 log_helper.cpp の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="log__helper_8cpp__incl.png" border="0" usemap="#asrc_2log__helper_8cpp" alt=""/></div>
+<div class="center"><img src="log__helper_8cpp__incl.png" border="0" usemap="#asrc_2log__helper_8cpp" loading="lazy" alt=""/></div>
 <map name="asrc_2log__helper_8cpp" id="asrc_2log__helper_8cpp">
 <area shape="rect" title=" " alt="" coords="121,5,259,31"/>
 <area shape="rect" title=" " alt="" coords="5,225,89,251"/>
@@ -110,19 +112,16 @@ log_helper.cpp の依存先関係図:</div>
 </map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a12d075f9ee7b24eb3b684b6c78052a1c" id="r_a12d075f9ee7b24eb3b684b6c78052a1c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log__helper_8cpp.html#a12d075f9ee7b24eb3b684b6c78052a1c">getLogLevelString</a> (<a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level)</td></tr>
-<tr class="memdesc:a12d075f9ee7b24eb3b684b6c78052a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogLevel列挙型に対応する文字列を返します。  <br /></td></tr>
-<tr class="separator:a12d075f9ee7b24eb3b684b6c78052a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac376aa5745870a379ad0580d50f82167" id="r_ac376aa5745870a379ad0580d50f82167"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log__helper_8cpp.html#ac376aa5745870a379ad0580d50f82167">getLogLevelInt</a> (<a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level)</td></tr>
-<tr class="memdesc:ac376aa5745870a379ad0580d50f82167"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogLevel列挙型に対応する整数値を返します。  <br /></td></tr>
-<tr class="separator:ac376aa5745870a379ad0580d50f82167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68878a46f4d4182c42caaa8814a90f20" id="r_a68878a46f4d4182c42caaa8814a90f20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20">logMessage</a> (<a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const String &amp;message)</td></tr>
-<tr class="memdesc:a68878a46f4d4182c42caaa8814a90f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたログレベルとメッセージを処理します。  <br /></td></tr>
-<tr class="separator:a68878a46f4d4182c42caaa8814a90f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d075f9ee7b24eb3b684b6c78052a1c" id="r_a12d075f9ee7b24eb3b684b6c78052a1c"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a12d075f9ee7b24eb3b684b6c78052a1c">getLogLevelString</a> (<a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level)</td></tr>
+<tr class="memdesc:a12d075f9ee7b24eb3b684b6c78052a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログレベルに応じた文字列を取得します。  <br /></td></tr>
+<tr class="memitem:ac376aa5745870a379ad0580d50f82167" id="r_ac376aa5745870a379ad0580d50f82167"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac376aa5745870a379ad0580d50f82167">getLogLevelInt</a> (<a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level)</td></tr>
+<tr class="memdesc:ac376aa5745870a379ad0580d50f82167"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログレベルに応じた整数値を取得します。  <br /></td></tr>
+<tr class="memitem:a68878a46f4d4182c42caaa8814a90f20" id="r_a68878a46f4d4182c42caaa8814a90f20"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a68878a46f4d4182c42caaa8814a90f20">logMessage</a> (<a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> level, const String &amp;message)</td></tr>
+<tr class="memdesc:a68878a46f4d4182c42caaa8814a90f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたログレベルでメッセージを記録・出力します。  <br /></td></tr>
 </table>
-<h2 class="groupheader">関数詳解</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="ac376aa5745870a379ad0580d50f82167" name="ac376aa5745870a379ad0580d50f82167"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac376aa5745870a379ad0580d50f82167">&#9670;&#160;</a></span>getLogLevelInt()</h2>
 
@@ -132,25 +131,26 @@ log_helper.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">int getLogLevelInt </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a>&#160;</td>
-          <td class="paramname"><em>level</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>LogLevel列挙型に対応する整数値を返します。 </p>
+<p>ログレベルに応じた整数値を取得します。 </p>
+<p>LogLevel列挙型に対応する整数値を返します。</p>
+<p>ログの優先度比較や、条件分岐の判定用に 指定された <a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> 列挙型の値を対応する数値へ変換します。</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>ログレベル。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>変換対象のログレベル（LogLevel型） </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>ログレベルの整数表現。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>int 対応するログレベルの数値（未定義の場合は 0） </dd></dl>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="log__helper_8cpp_ac376aa5745870a379ad0580d50f82167_icgraph.png" border="0" usemap="#alog__helper_8cpp_ac376aa5745870a379ad0580d50f82167_icgraph" alt=""/></div>
+<div class="center"><img src="log__helper_8cpp_ac376aa5745870a379ad0580d50f82167_icgraph.png" border="0" usemap="#alog__helper_8cpp_ac376aa5745870a379ad0580d50f82167_icgraph" loading="lazy" alt=""/></div>
 <map name="alog__helper_8cpp_ac376aa5745870a379ad0580d50f82167_icgraph" id="alog__helper_8cpp_ac376aa5745870a379ad0580d50f82167_icgraph">
 <area shape="rect" title="LogLevel列挙型に対応する整数値を返します。" alt="" coords="573,129,692,155"/>
 <area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルとメッセージを処理します。" alt="" coords="425,129,525,155"/>
@@ -184,25 +184,26 @@ log_helper.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">String getLogLevelString </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a>&#160;</td>
-          <td class="paramname"><em>level</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>LogLevel列挙型に対応する文字列を返します。 </p>
+<p>ログレベルに応じた文字列を取得します。 </p>
+<p>LogLevel列挙型に対応する文字列を返します。</p>
+<p>内部のデバッグログ出力時に、指定された <a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a> 列挙型の値を 対応する識別用の文字列（例: "ERROR", "WARN"）に変換するために使用します。</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>ログレベル。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>変換対象のログレベル（LogLevel型） </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>ログレベルの文字列表現。 </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>String 対応するログレベルの文字列（未定義の場合は "UNKNOWN"） </dd></dl>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="log__helper_8cpp_a12d075f9ee7b24eb3b684b6c78052a1c_icgraph.png" border="0" usemap="#alog__helper_8cpp_a12d075f9ee7b24eb3b684b6c78052a1c_icgraph" alt=""/></div>
+<div class="center"><img src="log__helper_8cpp_a12d075f9ee7b24eb3b684b6c78052a1c_icgraph.png" border="0" usemap="#alog__helper_8cpp_a12d075f9ee7b24eb3b684b6c78052a1c_icgraph" loading="lazy" alt=""/></div>
 <map name="alog__helper_8cpp_a12d075f9ee7b24eb3b684b6c78052a1c_icgraph" id="alog__helper_8cpp_a12d075f9ee7b24eb3b684b6c78052a1c_icgraph">
 <area shape="rect" title="LogLevel列挙型に対応する文字列を返します。" alt="" coords="573,129,712,155"/>
 <area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルとメッセージを処理します。" alt="" coords="425,129,525,155"/>
@@ -236,35 +237,30 @@ log_helper.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">void logMessage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a>&#160;</td>
-          <td class="paramname"><em>level</em>, </td>
+          <td class="paramtype"><a class="el" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9">LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>指定されたログレベルとメッセージを処理します。 </p>
-<p>CURRENT_LOG_LEVELに基づいてメッセージをフィルタリングし、 MQTTまたはシリアルポートに出力します。 </p><dl class="params"><dt>引数</dt><dd>
+<p>指定されたログレベルでメッセージを記録・出力します。 </p>
+<p>指定されたログレベルとメッセージを処理します。</p>
+<p>現在の設定（CURRENT_LOG_LEVEL）と判定し、有効な場合にのみ処理を行います。 JSONバッファを生成してログデータを格納し、有効化されているマクロに応じて MQTT送信（LOG_TO_MQTT）やシリアル出力（LOG_TO_SERIAL）を行います。</p>
+<dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>ログレベル。 </td></tr>
-    <tr><td class="paramname">message</td><td>出力するメッセージ。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>ログメッセージの重要度（LogLevel型） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>記録するログ本文の文字列 </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="log__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_cgraph.png" border="0" usemap="#alog__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_cgraph" alt=""/></div>
+<div class="center"><img src="log__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_cgraph.png" border="0" usemap="#alog__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_cgraph" loading="lazy" alt=""/></div>
 <map name="alog__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_cgraph" id="alog__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_cgraph">
 <area shape="rect" title="指定されたログレベルとメッセージを処理します。" alt="" coords="5,80,105,105"/>
 <area shape="rect" href="log__helper_8cpp.html#ac376aa5745870a379ad0580d50f82167" title="LogLevel列挙型に対応する整数値を返します。" alt="" coords="163,5,282,31"/>
@@ -279,7 +275,7 @@ log_helper.cpp の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="log__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_icgraph.png" border="0" usemap="#alog__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_icgraph" alt=""/></div>
+<div class="center"><img src="log__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_icgraph.png" border="0" usemap="#alog__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_icgraph" loading="lazy" alt=""/></div>
 <map name="alog__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_icgraph" id="alog__helper_8cpp_a68878a46f4d4182c42caaa8814a90f20_icgraph">
 <area shape="rect" title="指定されたログレベルとメッセージを処理します。" alt="" coords="425,129,525,155"/>
 <area shape="rect" href="mqtt__helper_8cpp.html#a809f04a8ce2340560609f6fb2cb82d9e" title="MQTTブローカーへの接続を試行します。" alt="" coords="230,5,341,31"/>
@@ -305,7 +301,8 @@ log_helper.cpp の依存先関係図:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

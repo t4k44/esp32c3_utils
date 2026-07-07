@@ -6,27 +6,62 @@ src/wifi_helper.h
 .SH SYNOPSIS
 .br
 .PP
-\fC#include <WiFi\&.h>\fP
+\fR#include 'log_helper\&.h'\fP
 .br
-\fC#include <settings\&.h>\fP
+\fR#include <WiFi\&.h>\fP
 .br
-\fC#include 'log_helper\&.h'\fP
+\fR#include <settings\&.h>\fP
 .br
 
 .SS "関数"
 
 .in +1c
 .ti -1c
-.RI "void \fBmaintainWiFiConnection\fP ()"
+.RI "wl_status_t \fBmaintainWiFiConnection\fP ()"
 .br
-.RI "WiFi接続を維持します。 "
+.RI "Wi-Fiの接続状態を監視し、切断時に自動再接続を試行します。 "
 .in -1c
 .SH "関数詳解"
 .PP 
-.SS "void maintainWiFiConnection ()"
+.SS "wl_status_t maintainWiFiConnection ()"
 
 .PP
-WiFi接続を維持します。 WiFiが未接続の場合、再接続を試行します。接続成功時にはIPアドレス、SSID、MACアドレスをログに出力します。 接続に失敗した場合でも、ループを維持し再起動は行いません。 
+Wi-Fiの接続状態を監視し、切断時に自動再接続を試行します。 
+.PP
+\fB戻り値\fP
+.RS 4
+最終的なWi-Fi接続ステータス (wl_status_t)
+.IP "\(bu" 2
+WL_CONNECTED: 接続成功
+.IP "\(bu" 2
+それ以外: 接続失敗または試行中
+.PP
+.RE
+.PP
+現在の接続ステータスを確認し、切断されている場合は設定された資格情報 （WIFI_SSID, WIFI_PASS）を使用して再接続を開始します。 接続成功時にはIPアドレス、SSID、MACアドレスをログに出力します。
+
+.PP
+【動作仕様】
+.IP "\(bu" 2
+タイムアウト: 再接続試行開始から最大10秒間、接続を待機します。
+.IP "\(bu" 2
+ブロッキング: 接続待ちの間、100msごとのポーリングを行い、最大10秒間処理をブロックします。
+.IP "\(bu" 2
+失敗時の挙動: 10秒以内に接続できない場合でも、システムの再起動（ESP\&.restart）は行わず、 呼び出し元へ処理を戻します。
+.PP
+
+.PP
+\fB覚え書き\fP
+.RS 4
+loop() 内で定期的に呼び出すことで、ネットワークの継続性を維持することを想定しています。 
+.RE
+.PP
+\fB参照\fP
+.RS 4
+\fBlogMessage\fP, WIFI_SSID, WIFI_PASS 
+.RE
+.PP
+
 .SH "著者"
 .PP 
  esp32c3_libのソースコードから抽出しました。

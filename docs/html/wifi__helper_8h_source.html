@@ -3,12 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>esp32c3_lib: src/wifi_helper.h ソースファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -29,28 +31,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.8 -->
+<!-- 構築: Doxygen 1.16.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','検索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,51 +70,55 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">wifi_helper.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="wifi__helper_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;WiFi.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;settings.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="log__helper_8h.html">log_helper.h</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="wifi__helper_8h.html#a372449d9713c2910151ba401569e571c">   13</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="wifi__helper_8h.html#a372449d9713c2910151ba401569e571c">maintainWiFiConnection</a>() {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keywordflow">if</span> (WiFi.status() != WL_CONNECTED) {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_function" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20">logMessage</a>(<a class="code hl_enumvalue" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a>, <span class="stringliteral">&quot;WiFi未接続。再接続を試行中...&quot;</span>);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    WiFi.begin(WIFI_SSID, WIFI_PASS);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> timeout = millis();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">while</span> (WiFi.status() != WL_CONNECTED &amp;&amp; millis() - timeout &lt; 10000) {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      delay(100);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">if</span> (WiFi.status() == WL_CONNECTED) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      <a class="code hl_function" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20">logMessage</a>(<a class="code hl_enumvalue" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;WiFi接続成功 IP: &quot;</span> + WiFi.localIP().toString() + </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                           <span class="stringliteral">&quot; SSID: &quot;</span> + WiFi.SSID() + </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                           <span class="stringliteral">&quot; MAC: &quot;</span> + WiFi.macAddress());</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <a class="code hl_function" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20">logMessage</a>(<a class="code hl_enumvalue" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a>, <span class="stringliteral">&quot;WiFi未接続継続。再起動せずループ維持。&quot;</span>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="comment">// ESP.restart(); ← コメントアウト or 削除！</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="log__helper_8h.html">log_helper.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;WiFi.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;settings.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="wifi__helper_8h.html#a822c18a2f9eca58f7ad244c1b03e6fb8">   26</a></span>wl_status_t <a class="code hl_function" href="wifi__helper_8h.html#a822c18a2f9eca58f7ad244c1b03e6fb8">maintainWiFiConnection</a>() {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordflow">if</span> (WiFi.status() != WL_CONNECTED) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20">logMessage</a>(<a class="code hl_enumvalue" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a>, <span class="stringliteral">&quot;WiFi未接続。再接続を試行中...&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    WiFi.begin(WIFI_SSID, WIFI_PASS);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> timeout = millis();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">while</span> (WiFi.status() != WL_CONNECTED &amp;&amp; millis() - timeout &lt; 10000) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      delay(100);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (WiFi.status() == WL_CONNECTED) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <a class="code hl_function" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20">logMessage</a>(<a class="code hl_enumvalue" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;WiFi接続成功 IP: &quot;</span> + WiFi.localIP().toString() +</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                               <span class="stringliteral">&quot; SSID: &quot;</span> + WiFi.SSID() +</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                               <span class="stringliteral">&quot; MAC: &quot;</span> + WiFi.macAddress());</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <a class="code hl_function" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20">logMessage</a>(<a class="code hl_enumvalue" href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a>, <span class="stringliteral">&quot;WiFi未接続継続。再起動せずループ維持。&quot;</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="comment">// ESP.restart();</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">return</span> WiFi.status();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
 </div>
-<div class="ttc" id="alog__helper_8cpp_html_a68878a46f4d4182c42caaa8814a90f20"><div class="ttname"><a href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20">logMessage</a></div><div class="ttdeci">void logMessage(LogLevel level, const String &amp;message)</div><div class="ttdoc">指定されたログレベルとメッセージを処理します。</div><div class="ttdef"><b>Definition</b> log_helper.cpp:45</div></div>
+<div class="ttc" id="alog__helper_8cpp_html_a68878a46f4d4182c42caaa8814a90f20"><div class="ttname"><a href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20">logMessage</a></div><div class="ttdeci">void logMessage(LogLevel level, const String &amp;message)</div><div class="ttdoc">指定されたログレベルでメッセージを記録・出力します。</div><div class="ttdef"><b>Definition</b> log_helper.cpp:65</div></div>
 <div class="ttc" id="alog__helper_8h_html"><div class="ttname"><a href="log__helper_8h.html">log_helper.h</a></div></div>
-<div class="ttc" id="alog__helper_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a6e98ff471e3ce6c4ef2d75c37ee51837"><div class="ttname"><a href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a></div><div class="ttdeci">@ LOG_INFO</div><div class="ttdef"><b>Definition</b> log_helper.h:8</div></div>
-<div class="ttc" id="alog__helper_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ac8041ffa22bc823d4726701cdb13fc13"><div class="ttname"><a href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a></div><div class="ttdeci">@ LOG_WARN</div><div class="ttdef"><b>Definition</b> log_helper.h:7</div></div>
-<div class="ttc" id="awifi__helper_8h_html_a372449d9713c2910151ba401569e571c"><div class="ttname"><a href="wifi__helper_8h.html#a372449d9713c2910151ba401569e571c">maintainWiFiConnection</a></div><div class="ttdeci">void maintainWiFiConnection()</div><div class="ttdoc">WiFi接続を維持します。</div><div class="ttdef"><b>Definition</b> wifi_helper.h:13</div></div>
+<div class="ttc" id="alog__helper_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a6e98ff471e3ce6c4ef2d75c37ee51837"><div class="ttname"><a href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a></div><div class="ttdeci">@ LOG_INFO</div><div class="ttdef"><b>Definition</b> log_helper.h:5</div></div>
+<div class="ttc" id="alog__helper_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ac8041ffa22bc823d4726701cdb13fc13"><div class="ttname"><a href="log__helper_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a></div><div class="ttdeci">@ LOG_WARN</div><div class="ttdef"><b>Definition</b> log_helper.h:5</div></div>
+<div class="ttc" id="awifi__helper_8h_html_a822c18a2f9eca58f7ad244c1b03e6fb8"><div class="ttname"><a href="wifi__helper_8h.html#a822c18a2f9eca58f7ad244c1b03e6fb8">maintainWiFiConnection</a></div><div class="ttdeci">wl_status_t maintainWiFiConnection()</div><div class="ttdoc">Wi-Fiの接続状態を監視し、切断時に自動再接続を試行します。</div><div class="ttdef"><b>Definition</b> wifi_helper.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>

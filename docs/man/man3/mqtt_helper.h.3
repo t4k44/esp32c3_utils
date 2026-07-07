@@ -6,13 +6,13 @@ src/mqtt_helper.h
 .SH SYNOPSIS
 .br
 .PP
-\fC#include <WiFi\&.h>\fP
+\fR#include 'log_helper\&.h'\fP
 .br
-\fC#include <PubSubClient\&.h>\fP
+\fR#include <PubSubClient\&.h>\fP
 .br
-\fC#include <settings\&.h>\fP
+\fR#include <WiFi\&.h>\fP
 .br
-\fC#include 'log_helper\&.h'\fP
+\fR#include <settings\&.h>\fP
 .br
 
 .SS "関数"
@@ -62,7 +62,7 @@ MQTTクライアントのループ処理を実行します。 受信メッセー
 .SS "void handleReceivedMessage (const char * topic, const char * payload)"
 
 .PP
-受信したMQTTメッセージを処理します。 現在は 'smart_speaker/speak' トピックのメッセージを処理します。 
+受信したMQTTメッセージを処理します。 現在は "smart_speaker/speak" トピックのメッセージを処理します。 
 .PP
 \fB引数\fP
 .RS 4
@@ -91,9 +91,9 @@ MQTTクライアントのループ処理を実行します。 受信メッセー
 デバイスのステータス情報をMQTTでパブリッシュします。 RSSI、稼働時間、ヒープメモリ情報などを含むJSON形式のペイロードを構築し、 MQTT_PUB_LOGトピックに送信します。 
 .SH "変数詳解"
 .PP 
-.SS "WiFiClient espClient\fC [extern]\fP"
+.SS "WiFiClient espClient\fR [extern]\fP"
 
-.SS "PubSubClient mqttClient\fC [extern]\fP"
+.SS "PubSubClient mqttClient\fR [extern]\fP"
 
 .SH "著者"
 .PP 

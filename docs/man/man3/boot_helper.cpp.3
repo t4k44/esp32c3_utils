@@ -6,11 +6,11 @@ src/boot_helper.cpp
 .SH SYNOPSIS
 .br
 .PP
-\fC#include 'boot_helper\&.h'\fP
+\fR#include 'boot_helper\&.h'\fP
 .br
-\fC#include <settings\&.h>\fP
+\fR#include 'mqtt_helper\&.h'\fP
 .br
-\fC#include 'mqtt_helper\&.h'\fP
+\fR#include <settings\&.h>\fP
 .br
 
 .SS "関数"
@@ -19,14 +19,46 @@ src/boot_helper.cpp
 .ti -1c
 .RI "void \fBpublishBootStatus\fP ()"
 .br
-.RI "デバイスの起動ステータスをMQTTでパブリッシュします。 "
+.RI "デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。 "
 .in -1c
 .SH "関数詳解"
 .PP 
 .SS "void publishBootStatus ()"
 
 .PP
-デバイスの起動ステータスをMQTTでパブリッシュします。 リセット理由、ファームウェアバージョン、コアID、ヒープ情報、フラッシュサイズなどを含む JSON形式のペイロードを構築し、MQTT_PUB_STATUSトピックに送信します。 
+デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。 デバイスの起動ステータスをMQTTでパブリッシュします。
+
+.PP
+ESP32のリセット理由、ファームウェア情報、実行コア、メモリ使用状況（ヒープ）、 およびフラッシュサイズを含むJSONペイロードを構築し、 指定されたトピック（MQTT_PUB_STATUS）へパブリッシュします。
+
+.PP
+【送信されるJSONの主要フィールド】
+.IP "\(bu" 2
+boot : 起動ステータス ("ok")
+.IP "\(bu" 2
+version : ファームウェアのバージョン (DEVICE_VERSION)
+.IP "\(bu" 2
+reason : 文字列化されたリセット理由 (例: "POWERON_RESET", "SOFTWARE_RESET")
+.IP "\(bu" 2
+sdkVersion : ESP-IDFのSDKバージョン
+.IP "\(bu" 2
+heapFree : 現在の空きヒープ容量 (バイト)
+.IP "\(bu" 2
+flashSize : 搭載されているフラッシュのサイズ
+.PP
+
+.PP
+\fB覚え書き\fP
+.RS 4
+この関数を呼び出す前に、MQTTクライアントが接続済みである必要があります。 
+.RE
+.PP
+\fB参照\fP
+.RS 4
+\fBpublishMQTT\fP, esp_reset_reason 
+.RE
+.PP
+
 .SH "著者"
 .PP 
  esp32c3_libのソースコードから抽出しました。

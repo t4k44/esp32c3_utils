@@ -1,0 +1,63 @@
+.TH "src/http_helper.h" 3 "esp32c3_lib" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/http_helper.h
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <HTTPClient\&.h>\fP
+.br
+
+.SS "関数"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBfetchImage\fP (const char *url, uint8_t *dst_buf, uint32_t max_bytes)"
+.br
+.RI "HTTP経由で指定されたURLから画像データを取得し、バッファに格納します。 "
+.in -1c
+.SH "関数詳解"
+.PP 
+.SS "uint32_t fetchImage (const char * url, uint8_t * dst_buf, uint32_t max_bytes)"
+
+.PP
+HTTP経由で指定されたURLから画像データを取得し、バッファに格納します。 
+.IP "\(bu" 2
+\fB引数\fP
+.RS 4
+\fIurl\fP 画像取得元のURL
+.RE
+.PP
+
+.IP "\(bu" 2
+\fB引数\fP
+.RS 4
+\fIdst_buf\fP 画像データを格納するためのバッファ（事前に確保済みであること）
+.RE
+.PP
+
+.IP "\(bu" 2
+\fB引数\fP
+.RS 4
+\fImax_bytes\fP 期待するデータサイズ（バイト数） 
+.RE
+.PP
+\fB戻り値\fP
+.RS 4
+uint32_t 実際に受信したデータのバイト数（失敗時は0）
+.RE
+.PP
+
+.IP "\(bu" 2
+\fB覚え書き\fP
+.RS 4
+期待するデータサイズ（max_bytes）と異なる場合でも、タイムアウトまたは データ終了まで受信を試みます。データ受信が継続している間は タイムアウトカウンタ（5000ms）がリセットされます。 
+.RE
+.PP
+
+.PP
+
+.SH "著者"
+.PP 
+ esp32c3_libのソースコードから抽出しました。

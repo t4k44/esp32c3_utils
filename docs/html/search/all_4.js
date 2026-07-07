@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['handlemqtt_0',['handlemqtt',['../mqtt__helper_8cpp.html#a926aeaa7d52ebd60e289af8d6ef98600',1,'handleMQTT():&#160;mqtt_helper.cpp'],['../mqtt__helper_8h.html#a926aeaa7d52ebd60e289af8d6ef98600',1,'handleMQTT():&#160;mqtt_helper.cpp']]],
-  ['handleota_1',['handleOTA',['../ota__helper_8h.html#a3caeaca3fcbd288827f42df9af8b7f08',1,'ota_helper.h']]],
-  ['handlereceivedmessage_2',['handlereceivedmessage',['../mqtt__helper_8cpp.html#a76be3ecf4a9ecd30e1585a7770d6285f',1,'handleReceivedMessage(const char *topic, const char *payload):&#160;mqtt_helper.cpp'],['../mqtt__helper_8h.html#a76be3ecf4a9ecd30e1585a7770d6285f',1,'handleReceivedMessage(const char *topic, const char *payload):&#160;mqtt_helper.cpp']]]
+  ['getloglevelint_0',['getLogLevelInt',['../log__helper_8cpp.html#ac376aa5745870a379ad0580d50f82167',1,'getLogLevelInt(LogLevel level):&#160;log_helper.cpp'],['../log__helper_8h.html#ac376aa5745870a379ad0580d50f82167',1,'getLogLevelInt(LogLevel level):&#160;log_helper.cpp']]],
+  ['getloglevelstring_1',['getLogLevelString',['../log__helper_8cpp.html#a12d075f9ee7b24eb3b684b6c78052a1c',1,'getLogLevelString(LogLevel level):&#160;log_helper.cpp'],['../log__helper_8h.html#a12d075f9ee7b24eb3b684b6c78052a1c',1,'getLogLevelString(LogLevel level):&#160;log_helper.cpp']]]
 ];

@@ -6,15 +6,15 @@ src/log_helper.cpp
 .SH SYNOPSIS
 .br
 .PP
-\fC#include <Arduino\&.h>\fP
+\fR#include 'log_helper\&.h'\fP
 .br
-\fC#include <ArduinoJson\&.h>\fP
+\fR#include 'mqtt_helper\&.h'\fP
 .br
-\fC#include <settings\&.h>\fP
+\fR#include <Arduino\&.h>\fP
 .br
-\fC#include 'log_helper\&.h'\fP
+\fR#include <ArduinoJson\&.h>\fP
 .br
-\fC#include 'mqtt_helper\&.h'\fP
+\fR#include <settings\&.h>\fP
 .br
 
 .SS "関数"
@@ -23,60 +23,72 @@ src/log_helper.cpp
 .ti -1c
 .RI "String \fBgetLogLevelString\fP (\fBLogLevel\fP level)"
 .br
-.RI "LogLevel列挙型に対応する文字列を返します。 "
+.RI "ログレベルに応じた文字列を取得します。 "
 .ti -1c
 .RI "int \fBgetLogLevelInt\fP (\fBLogLevel\fP level)"
 .br
-.RI "LogLevel列挙型に対応する整数値を返します。 "
+.RI "ログレベルに応じた整数値を取得します。 "
 .ti -1c
 .RI "void \fBlogMessage\fP (\fBLogLevel\fP level, const String &message)"
 .br
-.RI "指定されたログレベルとメッセージを処理します。 "
+.RI "指定されたログレベルでメッセージを記録・出力します。 "
 .in -1c
 .SH "関数詳解"
 .PP 
 .SS "int getLogLevelInt (\fBLogLevel\fP level)"
 
 .PP
-LogLevel列挙型に対応する整数値を返します。 
+ログレベルに応じた整数値を取得します。 LogLevel列挙型に対応する整数値を返します。
+
+.PP
+ログの優先度比較や、条件分岐の判定用に 指定された \fBLogLevel\fP 列挙型の値を対応する数値へ変換します。
+
 .PP
 \fB引数\fP
 .RS 4
-\fIlevel\fP ログレベル。 
+\fIlevel\fP 変換対象のログレベル（LogLevel型） 
 .RE
 .PP
 \fB戻り値\fP
 .RS 4
-ログレベルの整数表現。 
+int 対応するログレベルの数値（未定義の場合は 0） 
 .RE
 .PP
 
 .SS "String getLogLevelString (\fBLogLevel\fP level)"
 
 .PP
-LogLevel列挙型に対応する文字列を返します。 
+ログレベルに応じた文字列を取得します。 LogLevel列挙型に対応する文字列を返します。
+
+.PP
+内部のデバッグログ出力時に、指定された \fBLogLevel\fP 列挙型の値を 対応する識別用の文字列（例: "ERROR", "WARN"）に変換するために使用します。
+
 .PP
 \fB引数\fP
 .RS 4
-\fIlevel\fP ログレベル。 
+\fIlevel\fP 変換対象のログレベル（LogLevel型） 
 .RE
 .PP
 \fB戻り値\fP
 .RS 4
-ログレベルの文字列表現。 
+String 対応するログレベルの文字列（未定義の場合は "UNKNOWN"） 
 .RE
 .PP
 
 .SS "void logMessage (\fBLogLevel\fP level, const String & message)"
 
 .PP
-指定されたログレベルとメッセージを処理します。 CURRENT_LOG_LEVELに基づいてメッセージをフィルタリングし、 MQTTまたはシリアルポートに出力します。 
+指定されたログレベルでメッセージを記録・出力します。 指定されたログレベルとメッセージを処理します。
+
+.PP
+現在の設定（CURRENT_LOG_LEVEL）と判定し、有効な場合にのみ処理を行います。 JSONバッファを生成してログデータを格納し、有効化されているマクロに応じて MQTT送信（LOG_TO_MQTT）やシリアル出力（LOG_TO_SERIAL）を行います。
+
 .PP
 \fB引数\fP
 .RS 4
-\fIlevel\fP ログレベル。 
+\fIlevel\fP ログメッセージの重要度（LogLevel型） 
 .br
-\fImessage\fP 出力するメッセージ。 
+\fImessage\fP 記録するログ本文の文字列 
 .RE
 .PP
 

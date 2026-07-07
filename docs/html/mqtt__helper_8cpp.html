@@ -3,12 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>esp32c3_lib: src/mqtt_helper.cpp ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -29,21 +31,20 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.9.8 -->
+<!-- 構築: Doxygen 1.16.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','検索');
-  $(document).ready(function() { init_search(); });
+  initMenu('',true,false,'search.php','検索',false);
+  $(function() { init_search(); });
 });
-/* @license-end */
 </script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
@@ -69,9 +70,10 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#func-members">関数</a> &#124;
@@ -79,16 +81,16 @@ $(function() {
   <div class="headertitle"><div class="title">mqtt_helper.cpp ファイル</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;WiFi.h&gt;</code><br />
-<code>#include &lt;PubSubClient.h&gt;</code><br />
-<code>#include &lt;ArduinoJson.h&gt;</code><br />
-<code>#include &lt;settings.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="mqtt__helper_8h_source.html">mqtt_helper.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="log__helper_8h_source.html">log_helper.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mqtt__helper_8h_source.html">mqtt_helper.h</a>&quot;</code><br />
+<code>#include &lt;ArduinoJson.h&gt;</code><br />
+<code>#include &lt;PubSubClient.h&gt;</code><br />
+<code>#include &lt;WiFi.h&gt;</code><br />
+<code>#include &lt;settings.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 mqtt_helper.cpp の依存先関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="mqtt__helper_8cpp__incl.png" border="0" usemap="#asrc_2mqtt__helper_8cpp" alt=""/></div>
+<div class="center"><img src="mqtt__helper_8cpp__incl.png" border="0" usemap="#asrc_2mqtt__helper_8cpp" loading="lazy" alt=""/></div>
 <map name="asrc_2mqtt__helper_8cpp" id="asrc_2mqtt__helper_8cpp">
 <area shape="rect" title=" " alt="" coords="179,5,329,31"/>
 <area shape="rect" title=" " alt="" coords="5,152,68,177"/>
@@ -113,32 +115,25 @@ mqtt_helper.cpp の依存先関係図:</div>
 </map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a717105311582e81f1c9c6bb2238a00d2" id="r_a717105311582e81f1c9c6bb2238a00d2"><td class="memItemLeft" align="right" valign="top">PubSubClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#a717105311582e81f1c9c6bb2238a00d2">mqttClient</a> (<a class="el" href="mqtt__helper_8cpp.html#abd77e757e4b3bb6f1e4b42b21ea9e040">espClient</a>)</td></tr>
-<tr class="separator:a717105311582e81f1c9c6bb2238a00d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a809f04a8ce2340560609f6fb2cb82d9e" id="r_a809f04a8ce2340560609f6fb2cb82d9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#a809f04a8ce2340560609f6fb2cb82d9e">connectMQTT</a> ()</td></tr>
+<tr class="memitem:a717105311582e81f1c9c6bb2238a00d2" id="r_a717105311582e81f1c9c6bb2238a00d2"><td class="memItemLeft">PubSubClient&#160;</td><td class="memItemRight"><a class="el" href="#a717105311582e81f1c9c6bb2238a00d2">mqttClient</a> (<a class="el" href="#abd77e757e4b3bb6f1e4b42b21ea9e040">espClient</a>)</td></tr>
+<tr class="memitem:a809f04a8ce2340560609f6fb2cb82d9e" id="r_a809f04a8ce2340560609f6fb2cb82d9e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a809f04a8ce2340560609f6fb2cb82d9e">connectMQTT</a> ()</td></tr>
 <tr class="memdesc:a809f04a8ce2340560609f6fb2cb82d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTTブローカーへの接続を試行します。  <br /></td></tr>
-<tr class="separator:a809f04a8ce2340560609f6fb2cb82d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8a283f5dd5e82763ed6d71915f2485f" id="r_aa8a283f5dd5e82763ed6d71915f2485f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#aa8a283f5dd5e82763ed6d71915f2485f">publishMQTT</a> (const String &amp;topic, const String &amp;payload)</td></tr>
+<tr class="memitem:aa8a283f5dd5e82763ed6d71915f2485f" id="r_aa8a283f5dd5e82763ed6d71915f2485f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa8a283f5dd5e82763ed6d71915f2485f">publishMQTT</a> (const String &amp;topic, const String &amp;payload)</td></tr>
 <tr class="memdesc:aa8a283f5dd5e82763ed6d71915f2485f"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。  <br /></td></tr>
-<tr class="separator:aa8a283f5dd5e82763ed6d71915f2485f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a926aeaa7d52ebd60e289af8d6ef98600" id="r_a926aeaa7d52ebd60e289af8d6ef98600"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#a926aeaa7d52ebd60e289af8d6ef98600">handleMQTT</a> ()</td></tr>
+<tr class="memitem:a926aeaa7d52ebd60e289af8d6ef98600" id="r_a926aeaa7d52ebd60e289af8d6ef98600"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a926aeaa7d52ebd60e289af8d6ef98600">handleMQTT</a> ()</td></tr>
 <tr class="memdesc:a926aeaa7d52ebd60e289af8d6ef98600"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTTクライアントのループ処理を実行します。  <br /></td></tr>
-<tr class="separator:a926aeaa7d52ebd60e289af8d6ef98600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76be3ecf4a9ecd30e1585a7770d6285f" id="r_a76be3ecf4a9ecd30e1585a7770d6285f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#a76be3ecf4a9ecd30e1585a7770d6285f">handleReceivedMessage</a> (const char *topic, const char *payload)</td></tr>
+<tr class="memitem:a76be3ecf4a9ecd30e1585a7770d6285f" id="r_a76be3ecf4a9ecd30e1585a7770d6285f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a76be3ecf4a9ecd30e1585a7770d6285f">handleReceivedMessage</a> (const char *topic, const char *payload)</td></tr>
 <tr class="memdesc:a76be3ecf4a9ecd30e1585a7770d6285f"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信したMQTTメッセージを処理します。  <br /></td></tr>
-<tr class="separator:a76be3ecf4a9ecd30e1585a7770d6285f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f1b2d873f13395853489cd5f50258f4" id="r_a3f1b2d873f13395853489cd5f50258f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#a3f1b2d873f13395853489cd5f50258f4">sendDeviceStatus</a> ()</td></tr>
+<tr class="memitem:a3f1b2d873f13395853489cd5f50258f4" id="r_a3f1b2d873f13395853489cd5f50258f4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3f1b2d873f13395853489cd5f50258f4">sendDeviceStatus</a> ()</td></tr>
 <tr class="memdesc:a3f1b2d873f13395853489cd5f50258f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスのステータス情報をMQTTでパブリッシュします。  <br /></td></tr>
-<tr class="separator:a3f1b2d873f13395853489cd5f50258f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:abd77e757e4b3bb6f1e4b42b21ea9e040" id="r_abd77e757e4b3bb6f1e4b42b21ea9e040"><td class="memItemLeft" align="right" valign="top">WiFiClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#abd77e757e4b3bb6f1e4b42b21ea9e040">espClient</a></td></tr>
-<tr class="separator:abd77e757e4b3bb6f1e4b42b21ea9e040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd77e757e4b3bb6f1e4b42b21ea9e040" id="r_abd77e757e4b3bb6f1e4b42b21ea9e040"><td class="memItemLeft">WiFiClient&#160;</td><td class="memItemRight"><a class="el" href="#abd77e757e4b3bb6f1e4b42b21ea9e040">espClient</a></td></tr>
 </table>
-<h2 class="groupheader">関数詳解</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
 <a id="a809f04a8ce2340560609f6fb2cb82d9e" name="a809f04a8ce2340560609f6fb2cb82d9e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a809f04a8ce2340560609f6fb2cb82d9e">&#9670;&#160;</a></span>connectMQTT()</h2>
 
@@ -148,7 +143,7 @@ mqtt_helper.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">void connectMQTT </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -159,7 +154,7 @@ mqtt_helper.cpp の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="mqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_cgraph.png" border="0" usemap="#amqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_cgraph" alt=""/></div>
+<div class="center"><img src="mqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_cgraph.png" border="0" usemap="#amqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_cgraph" loading="lazy" alt=""/></div>
 <map name="amqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_cgraph" id="amqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_cgraph">
 <area shape="rect" title="MQTTブローカーへの接続を試行します。" alt="" coords="5,80,116,105"/>
 <area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルとメッセージを処理します。" alt="" coords="164,80,264,105"/>
@@ -185,7 +180,7 @@ mqtt_helper.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">void handleMQTT </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -205,19 +200,12 @@ mqtt_helper.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">void handleReceivedMessage </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>topic</em>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>topic</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>payload</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>payload</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -233,7 +221,7 @@ mqtt_helper.cpp の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="mqtt__helper_8cpp_a76be3ecf4a9ecd30e1585a7770d6285f_cgraph.png" border="0" usemap="#amqtt__helper_8cpp_a76be3ecf4a9ecd30e1585a7770d6285f_cgraph" alt=""/></div>
+<div class="center"><img src="mqtt__helper_8cpp_a76be3ecf4a9ecd30e1585a7770d6285f_cgraph.png" border="0" usemap="#amqtt__helper_8cpp_a76be3ecf4a9ecd30e1585a7770d6285f_cgraph" loading="lazy" alt=""/></div>
 <map name="amqtt__helper_8cpp_a76be3ecf4a9ecd30e1585a7770d6285f_cgraph" id="amqtt__helper_8cpp_a76be3ecf4a9ecd30e1585a7770d6285f_cgraph">
 <area shape="rect" title="受信したMQTTメッセージを処理します。" alt="" coords="5,80,189,105"/>
 <area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルとメッセージを処理します。" alt="" coords="237,80,337,105"/>
@@ -259,8 +247,7 @@ mqtt_helper.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">PubSubClient mqttClient </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="mqtt__helper_8cpp.html#abd77e757e4b3bb6f1e4b42b21ea9e040">espClient</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#abd77e757e4b3bb6f1e4b42b21ea9e040">espClient</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -277,19 +264,12 @@ mqtt_helper.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">void publishMQTT </td>
           <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>topic</em>, </td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>topic</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>payload</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>payload</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -305,7 +285,7 @@ mqtt_helper.cpp の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="mqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_cgraph.png" border="0" usemap="#amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_cgraph" alt=""/></div>
+<div class="center"><img src="mqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_cgraph.png" border="0" usemap="#amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_cgraph" loading="lazy" alt=""/></div>
 <map name="amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_cgraph" id="amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_cgraph">
 <area shape="rect" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="5,31,112,56"/>
 <area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルとメッセージを処理します。" alt="" coords="160,31,260,56"/>
@@ -320,7 +300,7 @@ mqtt_helper.cpp の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="mqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph.png" border="0" usemap="#amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph" alt=""/></div>
+<div class="center"><img src="mqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph.png" border="0" usemap="#amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph" loading="lazy" alt=""/></div>
 <map name="amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph" id="amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph">
 <area shape="rect" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="425,104,532,129"/>
 <area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルとメッセージを処理します。" alt="" coords="257,79,357,104"/>
@@ -352,7 +332,7 @@ mqtt_helper.cpp の依存先関係図:</div>
         <tr>
           <td class="memname">void sendDeviceStatus </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -363,7 +343,7 @@ mqtt_helper.cpp の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="mqtt__helper_8cpp_a3f1b2d873f13395853489cd5f50258f4_cgraph.png" border="0" usemap="#amqtt__helper_8cpp_a3f1b2d873f13395853489cd5f50258f4_cgraph" alt=""/></div>
+<div class="center"><img src="mqtt__helper_8cpp_a3f1b2d873f13395853489cd5f50258f4_cgraph.png" border="0" usemap="#amqtt__helper_8cpp_a3f1b2d873f13395853489cd5f50258f4_cgraph" loading="lazy" alt=""/></div>
 <map name="amqtt__helper_8cpp_a3f1b2d873f13395853489cd5f50258f4_cgraph" id="amqtt__helper_8cpp_a3f1b2d873f13395853489cd5f50258f4_cgraph">
 <area shape="rect" title="デバイスのステータス情報をMQTTでパブリッシュします。" alt="" coords="5,31,144,56"/>
 <area shape="rect" href="mqtt__helper_8cpp.html#aa8a283f5dd5e82763ed6d71915f2485f" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="192,31,299,56"/>
@@ -380,7 +360,7 @@ mqtt_helper.cpp の依存先関係図:</div>
 
 </div>
 </div>
-<h2 class="groupheader">変数詳解</h2>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">変数詳解</h2>
 <a id="abd77e757e4b3bb6f1e4b42b21ea9e040" name="abd77e757e4b3bb6f1e4b42b21ea9e040"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abd77e757e4b3bb6f1e4b42b21ea9e040">&#9670;&#160;</a></span>espClient</h2>
 
@@ -398,7 +378,8 @@ mqtt_helper.cpp の依存先関係図:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1
 </small></address>
+</div><!-- doc-content -->
 </body>
 </html>
