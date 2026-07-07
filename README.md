@@ -20,7 +20,7 @@
 
     `include/settings.h`の例:
 
-    ```c++
+    ```cpp
     #pragma once
 
     // WiFi設定
