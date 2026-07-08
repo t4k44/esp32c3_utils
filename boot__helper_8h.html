@@ -117,7 +117,7 @@ boot_helper.h の依存先関係図:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:aabf27c47c5001e93b889fb07cae36ec1" id="r_aabf27c47c5001e93b889fb07cae36ec1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="boot__helper_8h.html#aabf27c47c5001e93b889fb07cae36ec1">publishBootStatus</a> ()</td></tr>
-<tr class="memdesc:aabf27c47c5001e93b889fb07cae36ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスの起動ステータスをMQTTでパブリッシュします。  <br /></td></tr>
+<tr class="memdesc:aabf27c47c5001e93b889fb07cae36ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。  <br /></td></tr>
 <tr class="separator:aabf27c47c5001e93b889fb07cae36ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">関数詳解</h2>
@@ -136,9 +136,7 @@ boot_helper.h の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>デバイスの起動ステータスをMQTTでパブリッシュします。 </p>
-<p>リセット理由、ファームウェアバージョン、コアID、ヒープ情報、フラッシュサイズなどを含む JSON形式のペイロードを構築し、MQTT_PUB_STATUSトピックに送信します。</p>
-<p>デバイスの起動ステータスをMQTTでパブリッシュします。</p>
+<p>デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。 </p>
 <p>ESP32のリセット理由、ファームウェア情報、実行コア、メモリ使用状況（ヒープ）、 およびフラッシュサイズを含むJSONペイロードを構築し、 指定されたトピック（MQTT_PUB_STATUS）へパブリッシュします。</p>
 <p>【送信されるJSONの主要フィールド】</p><ul>
 <li>boot : 起動ステータス ("ok")</li>
@@ -155,7 +153,7 @@ boot_helper.h の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="boot__helper_8h_aabf27c47c5001e93b889fb07cae36ec1_cgraph.png" border="0" usemap="#aboot__helper_8h_aabf27c47c5001e93b889fb07cae36ec1_cgraph" alt=""/></div>
 <map name="aboot__helper_8h_aabf27c47c5001e93b889fb07cae36ec1_cgraph" id="aboot__helper_8h_aabf27c47c5001e93b889fb07cae36ec1_cgraph">
-<area shape="rect" title="デバイスの起動ステータスをMQTTでパブリッシュします。" alt="" coords="5,31,145,56"/>
+<area shape="rect" title="デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。" alt="" coords="5,31,145,56"/>
 <area shape="rect" href="mqtt__helper_8cpp.html#aa8a283f5dd5e82763ed6d71915f2485f" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="193,31,300,56"/>
 <area shape="poly" title=" " alt="" coords="146,41,179,41,179,46,146,46"/>
 <area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルでメッセージを記録・出力します。" alt="" coords="348,31,448,56"/>

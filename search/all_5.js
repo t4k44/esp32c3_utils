@@ -6,7 +6,7 @@ var searchData=
   ['h_20mqtt_5fhelper_20cpp_3',['mqtt_helper.h / mqtt_helper.cpp',['../index.html#autotoc_md5',1,'']]],
   ['handlemqtt_4',['handlemqtt',['../mqtt__helper_8cpp.html#a926aeaa7d52ebd60e289af8d6ef98600',1,'handleMQTT():&#160;mqtt_helper.cpp'],['../mqtt__helper_8h.html#a926aeaa7d52ebd60e289af8d6ef98600',1,'handleMQTT():&#160;mqtt_helper.cpp']]],
   ['handleota_5',['handleOTA',['../ota__helper_8h.html#a3caeaca3fcbd288827f42df9af8b7f08',1,'ota_helper.h']]],
-  ['handlereceivedmessage_6',['handlereceivedmessage',['../mqtt__helper_8cpp.html#a76be3ecf4a9ecd30e1585a7770d6285f',1,'handleReceivedMessage(const char *topic, const char *payload):&#160;mqtt_helper.cpp'],['../mqtt__helper_8h.html#a76be3ecf4a9ecd30e1585a7770d6285f',1,'handleReceivedMessage(const char *topic, const char *payload):&#160;mqtt_helper.cpp']]],
+  ['handlereceivedmessage_6',['handleReceivedMessage',['../mqtt__helper_8h.html#a76be3ecf4a9ecd30e1585a7770d6285f',1,'mqtt_helper.h']]],
   ['http_5fhelper_2ecpp_7',['http_helper.cpp',['../http__helper_8cpp.html',1,'']]],
   ['http_5fhelper_2eh_8',['http_helper.h',['../http__helper_8h.html',1,'']]]
 ];

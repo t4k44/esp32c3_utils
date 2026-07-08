@@ -1,18 +1,16 @@
 <map id="publishMQTT" name="publishMQTT">
-<area shape="rect" id="Node000001" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="425,104,532,129"/>
-<area shape="rect" id="Node000002" href="$log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルでメッセージを記録・出力します。" alt="" coords="257,79,357,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="411,118,343,107,344,101,412,113"/>
-<area shape="rect" id="Node000007" href="$boot__helper_8cpp.html#aabf27c47c5001e93b889fb07cae36ec1" title="デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。" alt="" coords="237,128,377,153"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="412,129,378,133,377,128,411,123"/>
-<area shape="rect" id="Node000008" href="$mqtt__helper_8cpp.html#a3f1b2d873f13395853489cd5f50258f4" title="デバイスのステータス情報をMQTTでパブリッシュします。" alt="" coords="238,177,377,203"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="442,138,378,167,346,180,344,175,376,162,439,133"/>
-<area shape="poly" id="edge5_Node000002_Node000001" title=" " alt="" coords="372,89,443,101,442,107,371,95"/>
-<area shape="rect" id="Node000003" href="$mqtt__helper_8cpp.html#a809f04a8ce2340560609f6fb2cb82d9e" title="MQTTブローカーへの接続を試行します。" alt="" coords="42,5,153,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="266,76,188,45,151,33,153,28,190,39,268,71"/>
-<area shape="rect" id="Node000004" href="$mqtt__helper_8cpp.html#a76be3ecf4a9ecd30e1585a7770d6285f" title="受信したMQTTメッセージを処理します。" alt="" coords="5,55,189,80"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="243,87,189,81,190,75,243,81"/>
-<area shape="rect" id="Node000005" href="$wifi__helper_8h.html#a822c18a2f9eca58f7ad244c1b03e6fb8" title="Wi&#45;Fiの接続状態を監視し、切断時に自動再接続を試行します。" alt="" coords="7,104,188,129"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="244,102,188,108,188,103,243,96"/>
-<area shape="rect" id="Node000006" href="$ota__helper_8h.html#a4f09d92897fdf84125059cf3bb5a55d5" title="OTA (Over&#45;The&#45;Air) アップデート機能をセットアップします。" alt="" coords="55,153,139,179"/>
-<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="255,111,238,118,190,143,140,159,139,154,188,138,236,113,253,106"/>
+<area shape="rect" id="Node000001" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="423,80,529,105"/>
+<area shape="rect" id="Node000002" href="$log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルでメッセージを記録・出力します。" alt="" coords="255,55,355,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="408,94,340,83,341,77,409,89"/>
+<area shape="rect" id="Node000006" href="$boot__helper_8cpp.html#aabf27c47c5001e93b889fb07cae36ec1" title="デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。" alt="" coords="235,104,375,129"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="409,105,376,109,375,104,409,99"/>
+<area shape="rect" id="Node000007" href="$mqtt__helper_8cpp.html#a3f1b2d873f13395853489cd5f50258f4" title="デバイスのステータス情報をMQTTでパブリッシュします。" alt="" coords="235,153,374,179"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="440,114,376,144,346,156,344,151,374,140,437,109"/>
+<area shape="poly" id="edge4_Node000002_Node000001" title=" " alt="" coords="369,65,440,77,439,83,368,71"/>
+<area shape="rect" id="Node000003" href="$mqtt__helper_8cpp.html#a809f04a8ce2340560609f6fb2cb82d9e" title="MQTTブローカーへの接続を試行します。" alt="" coords="41,5,151,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="241,55,150,33,151,28,242,50"/>
+<area shape="rect" id="Node000004" href="$wifi__helper_8h.html#a822c18a2f9eca58f7ad244c1b03e6fb8" title="Wi&#45;Fiの接続状態を監視し、切断時に自動再接続を試行します。" alt="" coords="5,55,187,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="241,70,187,70,187,65,241,65"/>
+<area shape="rect" id="Node000005" href="$ota__helper_8h.html#a4f09d92897fdf84125059cf3bb5a55d5" title="OTA (Over&#45;The&#45;Air) アップデート機能をセットアップします。" alt="" coords="54,104,138,129"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="242,85,139,109,138,104,241,80"/>
 </map>
