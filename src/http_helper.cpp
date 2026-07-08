@@ -38,7 +38,7 @@ uint32_t fetchImage(const char* url, uint8_t* dst_buf, uint32_t max_bytes) {
 
     while (received < max_bytes && (millis() - t0) < timeout_ms) {
         if (stream->available()) {
-            int n = stream->readBytes(image_buf + received,
+            int n = stream->readBytes(dst_buf + received,
                                       max_bytes - received);
             received += n;
             t0 = millis(); // データが来ている間はタイムアウトをリセット
