@@ -28,7 +28,7 @@ void publishBootStatus() {
     break;
   }
 
-  DynamicJsonDocument doc(128);
+  JsonDocument doc;
   doc["boot"]       = "ok";
   doc["version"]    = DEVICE_VERSION;
   doc["reason"]     = reasonStr;

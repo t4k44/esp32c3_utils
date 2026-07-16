@@ -7,7 +7,7 @@
 
 // Global client instances (defined in mqtt_helper.cpp)
 extern WiFiClient espClient;
-extern PubSubClient mqttClient;
+extern PubSubClient* mqttClient;
 
 /**
  * @brief MQTTブローカーへの接続を試行します。

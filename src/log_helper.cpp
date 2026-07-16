@@ -1,7 +1,7 @@
 #include "log_helper.h"
 #include "mqtt_helper.h"
 #include <Arduino.h>
-#include <ArduinoJson.h> // For DynamicJsonDocument
+#include <ArduinoJson.h>
 #include <settings.h>
 
 String getLogLevelString(LogLevel level) {
@@ -38,7 +38,7 @@ void logMessage(LogLevel level, const String &message) {
   if (level > CURRENT_LOG_LEVEL)
     return;
 
-  DynamicJsonDocument doc(128);
+  JsonDocument doc;
   doc["level"]   = getLogLevelInt(level);
   doc["message"] = message;
 
