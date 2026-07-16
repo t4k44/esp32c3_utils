@@ -8,7 +8,7 @@
     プロジェクトのルートディレクトリから、以下のコマンドでこのリポジトリをサブモジュールとして追加します。
 
     ```bash
-    git submodule add git@github.com:tkskkc/esp32c3_utils.git lib/utils
+    git submodule add git@github.com:t4k44/esp32c3_utils.git lib/utils
     ```
 
 2.  **設定ファイルの配置**:
