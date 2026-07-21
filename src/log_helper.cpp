@@ -50,6 +50,6 @@ void logMessage(LogLevel level, const String &message) {
 #endif
 
 #if defined(LOG_TO_SERIAL)
-  Serial.println(getLogLevelString(level) + message);
+  Serial.println("[" + getLogLevelString(level) + "] " + message);
 #endif
 }

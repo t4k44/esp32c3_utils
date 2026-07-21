@@ -9,13 +9,26 @@
 
 WiFiClientSecure* secret_client = nullptr;
 PubSubClient* mqttClient = nullptr;
+static unsigned long lastMqttRetryAttempt = 0;
 
 void connectMQTT() {
+  if (WiFi.status() != WL_CONNECTED) {
+    Serial.println("[WARN] WiFi未接続のため、MQTT接続をスキップ");
+    return;
+  }
+
   if (mqttClient == nullptr) {
     secret_client = new WiFiClientSecure();
     mqttClient = new PubSubClient(*secret_client);
   }
   if (!mqttClient->connected()) {
+    unsigned long now = millis();
+    // 5秒間隔でのみ再接続を試みる（CPU負荷およびTLS処理のオーバーヘッド防止）
+    if (now - lastMqttRetryAttempt < 5000) {
+      return;
+    }
+    lastMqttRetryAttempt = now;
+
     secret_client->setInsecure(); // 証明書検証を無効化し、メモリ消費を低減
     mqttClient->setServer(MQTT_BROKER, MQTT_PORT);
 
@@ -48,9 +61,11 @@ void publishMQTT(const String &topic, const String &payload) {
 }
 
 void handleMQTT() {
-  connectMQTT();
-  if (mqttClient != nullptr) {
-    mqttClient->loop();
+  if (WiFi.status() == WL_CONNECTED) {
+    connectMQTT();
+    if (mqttClient != nullptr) {
+      mqttClient->loop();
+    }
   }
 }
 
