@@ -4,15 +4,17 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="557,119,523,119,523,114,557,114"/>
 <area shape="rect" id="Node000003" href="$mqtt__helper_8cpp.html#a809f04a8ce2340560609f6fb2cb82d9e" title="MQTTブローカーへの接続を試行します。" alt="" coords="229,5,339,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="447,97,413,69,373,44,339,31,340,26,376,40,416,65,450,93"/>
-<area shape="rect" id="Node000004" href="$wifi__helper_8h.html#a822c18a2f9eca58f7ad244c1b03e6fb8" title="Wi&#45;Fiの接続状態を監視し、切断時に自動再接続を試行します。" alt="" coords="193,55,375,80"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="410,103,333,83,334,78,411,98"/>
-<area shape="rect" id="Node000005" href="$mqtt__helper_8cpp.html#aa8a283f5dd5e82763ed6d71915f2485f" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="231,104,337,129"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="409,128,338,128,338,122,409,123"/>
-<area shape="rect" id="Node000008" href="$ota__helper_8h.html#a4f09d92897fdf84125059cf3bb5a55d5" title="OTA (Over&#45;The&#45;Air) アップデート機能をセットアップします。" alt="" coords="242,153,326,179"/>
-<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="411,135,327,158,325,153,410,130"/>
-<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="351,105,422,106,422,111,351,111"/>
-<area shape="rect" id="Node000006" href="$boot__helper_8cpp.html#aabf27c47c5001e93b889fb07cae36ec1" title="デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。" alt="" coords="5,80,145,105"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="216,112,145,103,146,98,217,106"/>
-<area shape="rect" id="Node000007" href="$mqtt__helper_8cpp.html#a3f1b2d873f13395853489cd5f50258f4" title="デバイスのステータス情報をMQTTでパブリッシュします。" alt="" coords="6,129,145,155"/>
-<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="217,127,145,136,145,131,216,122"/>
+<area shape="rect" id="Node000005" href="$wifi__helper_8h.html#a822c18a2f9eca58f7ad244c1b03e6fb8" title="Wi&#45;Fiの接続状態を監視し、切断時に自動再接続を試行します。" alt="" coords="193,55,375,80"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="410,103,333,83,334,78,411,98"/>
+<area shape="rect" id="Node000006" href="$mqtt__helper_8cpp.html#aa8a283f5dd5e82763ed6d71915f2485f" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="231,104,337,129"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="409,128,338,128,338,122,409,123"/>
+<area shape="rect" id="Node000009" href="$ota__helper_8h.html#a4f09d92897fdf84125059cf3bb5a55d5" title="OTA (Over&#45;The&#45;Air) アップデート機能をセットアップします。" alt="" coords="242,153,326,179"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="411,135,327,158,325,153,410,130"/>
+<area shape="rect" id="Node000004" href="$mqtt__helper_8cpp.html#a926aeaa7d52ebd60e289af8d6ef98600" title="MQTTクライアントのループ処理を実行します。" alt="" coords="23,5,127,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="215,21,128,21,128,15,215,15"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="351,105,422,106,422,111,351,111"/>
+<area shape="rect" id="Node000007" href="$boot__helper_8cpp.html#aabf27c47c5001e93b889fb07cae36ec1" title="デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。" alt="" coords="5,79,145,104"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="216,111,145,102,146,97,217,106"/>
+<area shape="rect" id="Node000008" href="$mqtt__helper_8cpp.html#a3f1b2d873f13395853489cd5f50258f4" title="デバイスのステータス情報をMQTTでパブリッシュします。" alt="" coords="6,128,145,153"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="217,127,145,135,145,130,216,122"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['root_5fca_0',['root_ca',['../mqtt__helper_8cpp.html#aedb45b737887e887b3952a3becb2fb05',1,'mqtt_helper.cpp']]]
+  ['secret_5fclient_0',['secret_client',['../mqtt__helper_8cpp.html#af42c8686755e1aac96694065fcb25e60',1,'mqtt_helper.cpp']]]
 ];

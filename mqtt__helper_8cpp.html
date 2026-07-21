@@ -118,8 +118,6 @@ mqtt_helper.cpp の依存先関係図:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a6d835205241a1b2fbbe3d09b183326be" id="r_a6d835205241a1b2fbbe3d09b183326be"><td class="memItemLeft" align="right" valign="top">PubSubClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#a6d835205241a1b2fbbe3d09b183326be">mqttClient</a> (<a class="el" href="mqtt__helper_8cpp.html#a94b9ee2ad413be683fa4088a1977da9d">secret_client</a>)</td></tr>
-<tr class="separator:a6d835205241a1b2fbbe3d09b183326be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a809f04a8ce2340560609f6fb2cb82d9e" id="r_a809f04a8ce2340560609f6fb2cb82d9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#a809f04a8ce2340560609f6fb2cb82d9e">connectMQTT</a> ()</td></tr>
 <tr class="memdesc:a809f04a8ce2340560609f6fb2cb82d9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTTブローカーへの接続を試行します。  <br /></td></tr>
 <tr class="separator:a809f04a8ce2340560609f6fb2cb82d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,10 +133,10 @@ mqtt_helper.cpp の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:aedb45b737887e887b3952a3becb2fb05" id="r_aedb45b737887e887b3952a3becb2fb05"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#aedb45b737887e887b3952a3becb2fb05">root_ca</a></td></tr>
-<tr class="separator:aedb45b737887e887b3952a3becb2fb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94b9ee2ad413be683fa4088a1977da9d" id="r_a94b9ee2ad413be683fa4088a1977da9d"><td class="memItemLeft" align="right" valign="top">WiFiClientSecure&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#a94b9ee2ad413be683fa4088a1977da9d">secret_client</a></td></tr>
-<tr class="separator:a94b9ee2ad413be683fa4088a1977da9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af42c8686755e1aac96694065fcb25e60" id="r_af42c8686755e1aac96694065fcb25e60"><td class="memItemLeft" align="right" valign="top">WiFiClientSecure *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#af42c8686755e1aac96694065fcb25e60">secret_client</a> = nullptr</td></tr>
+<tr class="separator:af42c8686755e1aac96694065fcb25e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330ad5981d113409700e021734ea3a96" id="r_a330ad5981d113409700e021734ea3a96"><td class="memItemLeft" align="right" valign="top">PubSubClient *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqtt__helper_8cpp.html#a330ad5981d113409700e021734ea3a96">mqttClient</a> = nullptr</td></tr>
+<tr class="separator:a330ad5981d113409700e021734ea3a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">関数詳解</h2>
 <a id="a809f04a8ce2340560609f6fb2cb82d9e" name="a809f04a8ce2340560609f6fb2cb82d9e"></a>
@@ -175,6 +173,16 @@ mqtt_helper.cpp の依存先関係図:</div>
 <area shape="poly" title=" " alt="" coords="344,107,278,96,278,90,345,101"/>
 </map>
 </div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_icgraph.png" border="0" usemap="#amqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_icgraph" alt=""/></div>
+<map name="amqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_icgraph" id="amqtt__helper_8cpp_a809f04a8ce2340560609f6fb2cb82d9e_icgraph">
+<area shape="rect" title="MQTTブローカーへの接続を試行します。" alt="" coords="157,5,268,31"/>
+<area shape="rect" href="mqtt__helper_8cpp.html#a926aeaa7d52ebd60e289af8d6ef98600" title="MQTTクライアントのループ処理を実行します。" alt="" coords="5,5,109,31"/>
+<area shape="poly" title=" " alt="" coords="143,21,110,21,110,15,143,15"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -195,24 +203,25 @@ mqtt_helper.cpp の依存先関係図:</div>
 
 <p>MQTTクライアントのループ処理を実行します。 </p>
 <p>受信メッセージの処理や接続維持のために定期的に呼び出す必要があります。 </p>
-
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mqtt__helper_8cpp_a926aeaa7d52ebd60e289af8d6ef98600_cgraph.png" border="0" usemap="#amqtt__helper_8cpp_a926aeaa7d52ebd60e289af8d6ef98600_cgraph" alt=""/></div>
+<map name="amqtt__helper_8cpp_a926aeaa7d52ebd60e289af8d6ef98600_cgraph" id="amqtt__helper_8cpp_a926aeaa7d52ebd60e289af8d6ef98600_cgraph">
+<area shape="rect" title="MQTTクライアントのループ処理を実行します。" alt="" coords="5,80,109,105"/>
+<area shape="rect" href="mqtt__helper_8cpp.html#a809f04a8ce2340560609f6fb2cb82d9e" title="MQTTブローカーへの接続を試行します。" alt="" coords="157,80,268,105"/>
+<area shape="poly" title=" " alt="" coords="110,90,143,90,143,95,110,95"/>
+<area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルでメッセージを記録・出力します。" alt="" coords="316,80,416,105"/>
+<area shape="poly" title=" " alt="" coords="268,90,302,90,302,95,268,95"/>
+<area shape="rect" href="log__helper_8cpp.html#ac376aa5745870a379ad0580d50f82167" title="ログレベルに応じた整数値を取得します。" alt="" coords="474,5,593,31"/>
+<area shape="poly" title=" " alt="" coords="388,77,463,40,479,33,481,38,465,44,391,82"/>
+<area shape="rect" href="log__helper_8cpp.html#a12d075f9ee7b24eb3b684b6c78052a1c" title="ログレベルに応じた文字列を取得します。" alt="" coords="464,55,603,80"/>
+<area shape="poly" title=" " alt="" coords="416,82,450,77,450,83,417,88"/>
+<area shape="rect" href="mqtt__helper_8cpp.html#aa8a283f5dd5e82763ed6d71915f2485f" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="480,104,587,129"/>
+<area shape="poly" title=" " alt="" coords="403,103,467,113,466,119,402,108"/>
+<area shape="poly" title=" " alt="" coords="496,107,430,96,430,90,497,101"/>
+</map>
 </div>
-</div>
-<a id="a6d835205241a1b2fbbe3d09b183326be" name="a6d835205241a1b2fbbe3d09b183326be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d835205241a1b2fbbe3d09b183326be">&#9670;&#160;</a></span>mqttClient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">PubSubClient mqttClient </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="mqtt__helper_8cpp.html#a94b9ee2ad413be683fa4088a1977da9d">secret_client</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -270,20 +279,22 @@ mqtt_helper.cpp の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="mqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph.png" border="0" usemap="#amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph" alt=""/></div>
 <map name="amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph" id="amqtt__helper_8cpp_aa8a283f5dd5e82763ed6d71915f2485f_icgraph">
-<area shape="rect" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="423,80,529,105"/>
-<area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルでメッセージを記録・出力します。" alt="" coords="255,55,355,80"/>
-<area shape="poly" title=" " alt="" coords="408,94,340,83,341,77,409,89"/>
-<area shape="rect" href="boot__helper_8cpp.html#aabf27c47c5001e93b889fb07cae36ec1" title="デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。" alt="" coords="235,104,375,129"/>
-<area shape="poly" title=" " alt="" coords="409,105,376,109,375,104,409,99"/>
-<area shape="rect" href="mqtt__helper_8cpp.html#a3f1b2d873f13395853489cd5f50258f4" title="デバイスのステータス情報をMQTTでパブリッシュします。" alt="" coords="235,153,374,179"/>
-<area shape="poly" title=" " alt="" coords="440,114,376,144,346,156,344,151,374,140,437,109"/>
-<area shape="poly" title=" " alt="" coords="369,65,440,77,439,83,368,71"/>
-<area shape="rect" href="mqtt__helper_8cpp.html#a809f04a8ce2340560609f6fb2cb82d9e" title="MQTTブローカーへの接続を試行します。" alt="" coords="41,5,151,31"/>
-<area shape="poly" title=" " alt="" coords="241,55,150,33,151,28,242,50"/>
-<area shape="rect" href="wifi__helper_8h.html#a822c18a2f9eca58f7ad244c1b03e6fb8" title="Wi&#45;Fiの接続状態を監視し、切断時に自動再接続を試行します。" alt="" coords="5,55,187,80"/>
-<area shape="poly" title=" " alt="" coords="241,70,187,70,187,65,241,65"/>
-<area shape="rect" href="ota__helper_8h.html#a4f09d92897fdf84125059cf3bb5a55d5" title="OTA (Over&#45;The&#45;Air) アップデート機能をセットアップします。" alt="" coords="54,104,138,129"/>
-<area shape="poly" title=" " alt="" coords="242,85,139,109,138,104,241,80"/>
+<area shape="rect" title="指定されたトピックとペイロードでMQTTメッセージをパブリッシュします。" alt="" coords="575,80,681,105"/>
+<area shape="rect" href="log__helper_8cpp.html#a68878a46f4d4182c42caaa8814a90f20" title="指定されたログレベルでメッセージを記録・出力します。" alt="" coords="407,55,507,80"/>
+<area shape="poly" title=" " alt="" coords="560,94,492,83,493,77,561,89"/>
+<area shape="rect" href="boot__helper_8cpp.html#aabf27c47c5001e93b889fb07cae36ec1" title="デバイスの起動ステータスおよびシステム診断情報をMQTTで送信します。" alt="" coords="387,104,527,129"/>
+<area shape="poly" title=" " alt="" coords="561,105,528,109,527,104,561,99"/>
+<area shape="rect" href="mqtt__helper_8cpp.html#a3f1b2d873f13395853489cd5f50258f4" title="デバイスのステータス情報をMQTTでパブリッシュします。" alt="" coords="387,153,526,179"/>
+<area shape="poly" title=" " alt="" coords="592,114,528,144,498,156,496,151,526,140,589,109"/>
+<area shape="poly" title=" " alt="" coords="521,65,592,77,591,83,520,71"/>
+<area shape="rect" href="mqtt__helper_8cpp.html#a809f04a8ce2340560609f6fb2cb82d9e" title="MQTTブローカーへの接続を試行します。" alt="" coords="193,5,303,31"/>
+<area shape="poly" title=" " alt="" coords="393,55,302,33,303,28,394,50"/>
+<area shape="rect" href="wifi__helper_8h.html#a822c18a2f9eca58f7ad244c1b03e6fb8" title="Wi&#45;Fiの接続状態を監視し、切断時に自動再接続を試行します。" alt="" coords="157,55,339,80"/>
+<area shape="poly" title=" " alt="" coords="393,70,339,70,339,65,393,65"/>
+<area shape="rect" href="ota__helper_8h.html#a4f09d92897fdf84125059cf3bb5a55d5" title="OTA (Over&#45;The&#45;Air) アップデート機能をセットアップします。" alt="" coords="206,104,290,129"/>
+<area shape="poly" title=" " alt="" coords="394,85,291,109,290,104,393,80"/>
+<area shape="rect" href="mqtt__helper_8cpp.html#a926aeaa7d52ebd60e289af8d6ef98600" title="MQTTクライアントのループ処理を実行します。" alt="" coords="5,5,109,31"/>
+<area shape="poly" title=" " alt="" coords="178,21,110,21,110,15,178,15"/>
 </map>
 </div>
 
@@ -327,28 +338,28 @@ mqtt_helper.cpp の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="aedb45b737887e887b3952a3becb2fb05" name="aedb45b737887e887b3952a3becb2fb05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aedb45b737887e887b3952a3becb2fb05">&#9670;&#160;</a></span>root_ca</h2>
+<a id="a330ad5981d113409700e021734ea3a96" name="a330ad5981d113409700e021734ea3a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330ad5981d113409700e021734ea3a96">&#9670;&#160;</a></span>mqttClient</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char* root_ca</td>
+          <td class="memname">PubSubClient* mqttClient = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a94b9ee2ad413be683fa4088a1977da9d" name="a94b9ee2ad413be683fa4088a1977da9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94b9ee2ad413be683fa4088a1977da9d">&#9670;&#160;</a></span>secret_client</h2>
+<a id="af42c8686755e1aac96694065fcb25e60" name="af42c8686755e1aac96694065fcb25e60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af42c8686755e1aac96694065fcb25e60">&#9670;&#160;</a></span>secret_client</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">WiFiClientSecure secret_client</td>
+          <td class="memname">WiFiClientSecure* secret_client = nullptr</td>
         </tr>
       </table>
 </div><div class="memdoc">
